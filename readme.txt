@@ -1,9 +1,9 @@
-Hiero  WordPress theme, Copyright (C) 2013 aThemes
-Hiero WordPress theme is licensed under the GNU GPL v3.0
+Hepouf WordPress theme based on Hiero WordPress theme by aThemes
+Hepouf WordPress theme is licensed under the GNU GPL
 
-FOOTER LINK
 
-You can remove the footer link if you like but we would appreciate your support for our work by retaining it.
+Hepouf is a specifically developed for http://lepouf.info/ web site
+
 
 CREDITS
 
@@ -26,11 +26,6 @@ Entypo - Icon Fonts
 URL: http://www.entypo.com/
 License: SIL OFL 1.1
 Copyright: Daniel Bruce (@danielbruce_)
-
-Yanone Kaffeesatz - Font
-URL: http://www.google.com/fonts/specimen/Yanone+Kaffeesatz
-License: SIL OFL 1.1
-Copyright: Yanone, https://plus.google.com/117851060215561914602/about
 
 Superfish - Dropdown menu jQuery plugin.
 URL: http://users.tpg.com.au/j_birch/plugins/superfish/
