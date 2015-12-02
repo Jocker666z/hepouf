@@ -1,0 +1,185 @@
+/*
+Theme Name: Hiero
+Theme URI: http://lepouf.info/a-propos/themes/
+Author: Jocker
+Author URI: http://athemes.com http://lepouf.info/
+Description:  CSS for resolution under 1024px
+License: GNU General Public License v3.0
+*/
+/* Menu small navigation */
+.nav-open,
+.nav-close {
+	display: none;
+	color: #333;
+	font-size: 1.2em;
+	font-weight: 400;
+	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 50px;
+	letter-spacing: 1px;
+	background: #060608;
+	}
+
+@media screen and (max-width: 1025px) {
+	.container {
+		width: 90%;
+		}
+	.site-content {
+		margin-right: 40%;
+		}
+	.site-sidebar {
+		width: 35%;
+		margin-left: -35%;
+		}
+	.site-sidebar {
+		width: 95%;
+		margin: 0 0 10px;
+		}
+	.widget_search .search-field {
+		width: 95%;
+		margin: 0 0 0;
+		}
+	.site-extra .widget-area {
+		width: 50%;
+		}
+	}
+
+@media only screen and (max-width: 1024px) {
+	.site-branding {
+		width: 90%;
+	}
+	.nav-open {
+		display: block;
+		text-align: center;
+		}
+	#main-navigation {
+    		width: auto;
+		}
+	#main-navigation:target > .nav-open {
+		display: none;
+		}
+	#main-navigation:target > .nav-close {
+		display: block;
+		text-align: center;
+		}
+	#main-navigation > .sf-menu {
+		position: relative;
+		text-align: left;
+		z-index:100;
+		}
+	#main-navigation > .sf-menu > ul {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-height: 0;
+		max-width: 16em;
+		overflow: hidden;
+		background: #333;
+		}
+	#main-navigation:target > .sf-menu > ul {
+		max-height: 400px;
+		}
+	#main-navigation > .sf-menu > ul > li {
+		float: none;
+		display: block;
+		border-bottom: 1px dotted #565656;
+		}
+	#main-navigation li a {
+		float: none;
+		display: block;
+		color: #fff;
+		}
+	.widget_athemes_social_icons ul {
+		position: relative;
+		top: 10px;
+		}
+	.sidebar-entry {
+		text-align: center;
+		}
+	.header-search {
+		display: none;
+		}
+	}
+/* RESPONSIVE SUPPORT
+----------------------------------------------- */
+@media screen and (max-width: 1024px) {
+	.site-header .widget-area {
+		display: none;
+		}
+	.site-header .site-branding {
+		float: none;
+		text-align: center;
+		}
+	.content-area {
+		float: none;
+		}
+	.site-content {
+		margin: 0;
+		}
+	.entry-thumbnail {
+		float: none;
+		margin: 0 auto 15px;
+		}
+	.site-sidebar {
+		width: 100%;
+		float: none;
+		margin: 0 0 0;
+		}
+	.site-extra .widget-area {
+		width: 100%;
+		}
+	}
+@media screen and (max-width: 768px) {
+	.home .entry-back-ico-std [class*="ico-cat-"] {
+		display: inline;
+		position: relative;
+		top:32px;
+		width: 30px;
+	   	height: 30px;
+		right:25px;
+		border-radius: 4px;
+		float: right;
+		}
+	.entry-back-ico-std {
+		right: 0;
+		top: 0;
+		right: 0;
+	   	height: 65px;
+	  	transform: perspective(1px) rotate(5deg);
+	  		-webkit-transform: perspective(1px) rotate(5deg);
+	  		-moz-transform: perspective(1px) rotate(5deg);
+	  		-ms-transform: rotate(5deg);
+	  		-o-transform: rotate(5deg);
+		border-radius: 6px;
+		transition: none;
+		box-shadow: 5px 5px 8px 0px rgba(190,190,190,0.90);
+	}
+	.home .commfocus-trans:hover > .entry-back-ico-std {
+		top: 0;
+		right: 0;
+	  	transform: perspective(1px) rotate(5deg);
+	  		-webkit-transform: perspective(1px) rotate(5deg);
+	  		-moz-transform: perspective(1px) rotate(5deg);
+	  		-ms-transform: rotate(5deg);
+	  		-o-transform: rotate(5deg);
+	}
+	.home .format-video .entry-thumbnail2,
+	.home .entry-thumbnail2 {
+		display: none;
+	}
+	.home .entry-thumbnail2 img {
+		display: none;
+	}
+	.home .hentry {
+		height: auto;
+		margin: 0 0 55px;
+		border-bottom: none;
+		}
+	.home .entry-foot {
+		top: auto;
+		width: 100%;
+		border-bottom: 1px solid #d6d6d6;
+		}
+	}

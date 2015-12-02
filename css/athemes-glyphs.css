@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'athemes-glyphs';
+	src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+  	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+[class^="ico-"]:before, [class*=" ico-"]:before {
+	font-family: "athemes-glyphs";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+	}
+/* 'INTERNAL USE ICO' */
+.ico-tags:before 	{ content: '\f02c'; }
+.ico-left-open:before 	{ content: '\f137'; }
+.ico-right-open:before	{ content: '\f138'; }
+.ico-rss:before 	{ content: '\f09e'; }
+.ico-calendar:before 	{ content: '\f073'; }
+.ico-search:before 	{ content: '\f002'; }
+.ico-user:before 	{ content: '\f007'; }
+.ico-mail:before 	{ content: '\f0e0'; }
+.ico-links:before 	{ content: '\f0c1'; }
+.ico-folder:before 	{ content: '\f07c'; }
+.ico-comment:before 	{ content: '\f0e6'; }
+.ico-warning:before 	{ content: '\f071'; }
+/* 'CAT ICO' */
+.ico-cat-gnu-linux:before 	{ content: '\f17c'; width: 30px; font-size: 30px; }
+.ico-cat-cine:before 		{ content: '\f008'; width: 30px; font-size: 30px; }
+.ico-cat-jeux-video:before,
+.ico-cat-retrogaming:before 	{ content: '\f11b'; width: 30px; font-size: 30px; }
+.ico-cat-choses:before 		{ content: '\f06e'; width: 30px; font-size: 30px; }
+.ico-cat-informatique:before	{ content: '\f109'; width: 30px; font-size: 30px; }
+.ico-cat-tuto:before 		{ content: '\f11c'; width: 30px; font-size: 30px; }
+.ico-cat-lepouf:before 		{ content: '\f0f4'; width: 30px; font-size: 30px; }
+.ico-cat-musique:before 	{ content: '\f001'; width: 30px; font-size: 30px; }
+/* 'SOCIAL ICO' */
+.ico-twitter:before 	{ content: '\f099'; }
+.ico-facebook:before 	{ content: '\f09a'; }
+.ico-gplus:before 	{ content: '\f0d5'; }
+.ico-youtube:before 	{ content: '\f167'; }	
+.ico-linkedin:before 	{ content: '\e809'; }	/* 'NOT USE' */
+.ico-dribbble:before 	{ content: '\e80a'; }	/* 'NOT USE' */
+.ico-lastfm:before 	{ content: '\e80b'; }	/* 'NOT USE' */
+.ico-reddit:before 	{ content: '\f1a1'; }
+.ico-soundcloud:before 	{ content: '\e80f'; }	/* 'NOT USE' */
