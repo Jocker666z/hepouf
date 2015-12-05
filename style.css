@@ -678,6 +678,7 @@ dd {
 .entry-back-ico-std a.ico-cat-list:hover {
 	color: rgba(0, 0, 0, 1);
 	}
+.home .entry-content div.clearfix,
 .home .ffs-sep,
 .home .format-video .wp-caption,
 .home .format-video img[class*="wp-image-"],
@@ -927,6 +928,10 @@ a.wp_rp_thumbnail img {
 .format-video .wp-caption-text a {
 	font-style: italic;
 	text-transform: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	}
+.format-video .wp-caption-text a:hover {
+    color: #999;
 	}
 .format-video .alignleft .wp-caption-text,
 .format-video .alignright .wp-caption-text {
@@ -944,7 +949,7 @@ a.wp_rp_thumbnail img {
 .format-video div.alignleft.wp-caption p,
 .format-video div.alignright.wp-caption p {
 	border-bottom: 2px solid rgba(255, 40, 40, 0.8);
-	background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.3));
+	background: linear-gradient(to top, rgba(0,0,0,2), rgba(0,0,0,0.7));
 	}
 .format-video .alignleft .wp-caption-text a,
 .format-video .alignright .wp-caption-text a {
@@ -992,7 +997,7 @@ img {
 .aligncenter {
 	clear: both;
 	display: block;
-	margin: 0 auto;
+	margin: 35px auto 0;
 	}
 
 /*	08.3	Media Elements: Gallery
