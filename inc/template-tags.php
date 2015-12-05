@@ -70,11 +70,9 @@ function athemes_comment( $comment, $args, $depth ) {
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 			<footer class="clearfix comment-meta">
-				<div class="reply">
-					<?php edit_comment_link('Editer', '', '</br>'); ?>
-					<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-				</div><!-- .reply -->
+                        
 				<div class="reply-bar"><div class="reply-bar-circle"></div></div>
+            
 				<div class="clearfix comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
 
@@ -108,6 +106,9 @@ function athemes_comment( $comment, $args, $depth ) {
 
 			<div class="comment-content">
 				<?php comment_text(); ?>
+                <div class="reply">
+					<?php edit_comment_link('Editer', '', '</br>'); ?>
+				</div><!-- .reply -->
 			</div><!-- .comment-content -->
 		</article><!-- .comment-body -->
 

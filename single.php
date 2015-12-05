@@ -106,7 +106,6 @@ get_header();
 		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
-
 	</div><!-- #primary -->
 			<?php get_sidebar(); ?>
 			<?php get_footer(); ?>

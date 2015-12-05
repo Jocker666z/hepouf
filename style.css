@@ -1147,7 +1147,7 @@ object {
 	font-style: italic;
 	}
 .comment-list li.comment .comment-body {
-	padding: 30px 0 20px;
+	padding: 30px 0 0px;
 	border-bottom: 1px solid #d6d6d6;
 	}
 .logged-in-as,
@@ -1227,27 +1227,35 @@ object {
 .comment-list li.comment .comment-metadata a:hover {
 	color: #333;
 	}
-.comment-list li.comment .reply {
-	float: right;
-	}
-.comment-list li.comment .reply a {
-	color: #ff2828;
-	font-size: .9em;
-	font-weight: 300;
-	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 1px;
-	}
-.comment-list li.comment .reply a:hover {
-	color: #333;
-	}
 .comment-content {
 	clear: both;
 	margin: 20px 0 0;
 	}
 .comment-content a {
 	word-wrap: break-word;
+	}
+
+a.comment_quote_link,
+.comment-list li.comment .reply {
+	float: right;
+    margin-right: 20px;
+	}
+a.comment_quote_link,
+.comment-list li.comment .reply a {
+	font-size: 1em;
+	font-weight: 300;
+	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	}
+.comment-list li.comment .reply a {
+    position: relative;
+    top: -23px;
+	}
+a.comment_quote_link:hover,
+.comment-list li.comment .reply a:hover {
+	color: #333;
 	}
 
 /*	10.2	Comments: form
@@ -1282,7 +1290,7 @@ p.comment-form-author {
     margin: 0;
 }
 #commentform textarea {
-	height: 200px;
+	min-height: 200px;
     width: 98%;
 	}
 /*--------------------------------------------- */

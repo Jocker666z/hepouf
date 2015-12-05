@@ -239,3 +239,4 @@ function commentCount() {
     $count = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . get_comment_author_email() . '"');
     echo $count . ' messages';
 }
+
