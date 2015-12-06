@@ -139,20 +139,6 @@ a:active {
 
 /*	02.3	Text Elements: pre & code
 ----------------------------------------------- */
-pre[class]:before {
-  	content: attr(class);
-	position: relative;
-	top: -31px;
-	float: right;
-	margin: 0 20% 0 0;
-	padding: 0;
-	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-	font-size: 20px;
-	letter-spacing: 2px;
-  	text-transform : uppercase;
-	font-weight: bold;
-	border-bottom: 3px solid #ff2828;
-	}
 pre {
     display: block;
     font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
@@ -168,9 +154,9 @@ pre {
 	overflow-x: auto;
 	}
 code {
-    	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
-    	white-space: pre;
-    	background: #f6f6f6;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+    white-space: pre;
+    background: #f6f6f6;
 	padding: 1px 0 1px 0;
 	border-top: 1px solid #d6d6d6;
 	border-bottom: 1px solid #d6d6d6;
@@ -994,10 +980,13 @@ img {
 	float: right;
 	margin: 0 0 1em 1em;
 	}
+.home .aligncenter {
+	margin: 35px auto 0;
+	}
 .aligncenter {
 	clear: both;
 	display: block;
-	margin: 35px auto 0;
+	margin: 35px auto 35px;
 	}
 
 /*	08.3	Media Elements: Gallery
@@ -1155,29 +1144,40 @@ object {
     display: none;
 }
 
-/*	trick reply
+/*	reply button
 ----------------------------------------------- */
-.comment-list li.comment ul.children .reply-bar {
-	position: relative;
-	float: left;
-	top: -30px;
-	left: 31px;
-	height: 30px;
-	width: 1px;
-	background: rgb(214,214,214);
+a.comment_quote_link,
+.comment-list li.comment .reply {
+	float: right;
+    margin-right: 20px;
 	}
-.comment-list li.comment ul.children .reply-bar .reply-bar-circle {
-	position: relative;
-	top: -5.5px;
-	right: 4.5px;
-	float: left;
-  	width: 10px;
-  	height: 10px;
-	background: rgb(190,190,190);
-  	border-radius:50%;
+a.comment_quote_link,
+.comment-list li.comment .reply a {
+	font-size: 1em;
+	font-weight: 300;
+	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	}
+.comment-list li.comment .reply a {
+    position: relative;
+    top: -23px;
+	}
+a.comment_quote_link:hover,
+.comment-list li.comment .reply a:hover {
+	color: #333;
+	}
+.comment-content blockquote p {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+	margin: 0 0 5px 15px;
+	padding-right: 10px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	}
 
-/*	end trick
+/*	end reply button
 ----------------------------------------------- */
 .comment-list li.comment .comment-author .avatar {
 	float: left;
@@ -1235,29 +1235,6 @@ object {
 	word-wrap: break-word;
 	}
 
-a.comment_quote_link,
-.comment-list li.comment .reply {
-	float: right;
-    margin-right: 20px;
-	}
-a.comment_quote_link,
-.comment-list li.comment .reply a {
-	font-size: 1em;
-	font-weight: 300;
-	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 1px;
-	}
-.comment-list li.comment .reply a {
-    position: relative;
-    top: -23px;
-	}
-a.comment_quote_link:hover,
-.comment-list li.comment .reply a:hover {
-	color: #333;
-	}
-
 /*	10.2	Comments: form
 ----------------------------------------------- */
 #reply-title {
@@ -1292,6 +1269,21 @@ p.comment-form-author {
 #commentform textarea {
 	min-height: 200px;
     width: 98%;
+	}
+.form-allowed-tags {
+    float: right;
+    width: 68%;
+    height: 48px;
+    padding-left: 8px;
+    border-left: 5px solid #d6d6d6;
+	}
+.form-allowed-tags code {
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+    white-space: normal;
+    background: none;
+	padding: 1px 0 1px 0;
+	border-top: none;
+	border-bottom: none;
 	}
 /*--------------------------------------------- */
 /*	11	List search & cat

@@ -93,7 +93,8 @@ get_header();
 
 				</div>
 		<div class="share-post ">
-			<?php wp_related_posts()?></div>
+			<?php wp_related_posts()?>
+        </div>
 
 			<?php athemes_content_nav( 'nav-below' ); ?>
 			

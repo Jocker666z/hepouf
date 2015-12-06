@@ -239,4 +239,17 @@ function commentCount() {
     $count = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . get_comment_author_email() . '"');
     echo $count . ' messages';
 }
-
+// Allowed tags array and hook into WP comments
+function lepouf_allowed_tags_comments() {
+  define('custom_tags', true);
+  global $allowedtags;
+  $allowedtags = array(
+      'em' => array(),
+      'strong' => array(),
+      'u' => array(),
+      'blockquote' => array(),
+      'pre' => array(),
+      'code' => array()
+  );
+}
+add_action('init', 'lepouf_allowed_tags_comments', 10);
