@@ -71,7 +71,7 @@ function athemes_comment( $comment, $args, $depth ) {
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 			<footer class="clearfix comment-meta">
                         
-				<div class="reply-bar"><div class="reply-bar-circle"></div></div>
+				<div class="reply-bar"></div>
             
 				<div class="clearfix comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
