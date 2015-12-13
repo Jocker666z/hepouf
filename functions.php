@@ -239,8 +239,10 @@ function commentCount() {
     $count = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . get_comment_author_email() . '"');
     echo $count . ' messages';
 }
-// Allowed tags array and hook into WP comments
-function lepouf_allowed_tags_comments() {
+/**
+ * Allowed tags array and hook into WP comments
+ */
+function list_of_allowed_tags_comments() {
   define('custom_tags', true);
   global $allowedtags;
   $allowedtags = array(
@@ -252,4 +254,17 @@ function lepouf_allowed_tags_comments() {
       'code' => array()
   );
 }
-add_action('init', 'lepouf_allowed_tags_comments', 10);
+add_action('init', 'list_of_allowed_tags_comments', 10);
+/**
+ * Limit lettering in comments
+ */
+add_filter( 'preprocess_comment', 'lp_preprocess_comment' );
+function lp_preprocess_comment($comment) {
+    if ( strlen( $comment['comment_content'] ) > 5000 ) {
+        wp_die('Votre commentaire est trop long. La limite est de 5000 caractères.');
+    }
+if ( strlen( $comment['comment_content'] ) < 4 ) {
+        wp_die('Votre commentaire est trop court. La limite est de 4 caractères.');
+    }
+    return $comment;
+}
