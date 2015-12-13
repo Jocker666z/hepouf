@@ -1,11 +1,14 @@
-Hepouf WordPress theme based on Hiero WordPress theme by aThemes
+Hepouf WordPress theme
 Hepouf WordPress theme is licensed under the GNU GPL v3
-
-
-Hepouf is a specifically developed for http://lepouf.info/ web site
+Hepouf is a specifically developed for http://lepouf.info/
 
 
 CREDITS
+
+Hiero - Base Theme
+URL: http://athemes.com/theme/hiero/
+License: GNU GPL v3
+Copyright: aThemes
 
 Underscores (_s) - Base Theme
 URL: http://underscores.me/
