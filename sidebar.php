@@ -6,26 +6,7 @@
  */
 ?>
 <div id="widget-area-2" class="site-sidebar widget-area" role="complementary">
-<?php
-		/**
-			<div class="widget">
-				<div class="roundedImage">
-				    <img src="http://lepouf.info/wp-content/uploads/2014/08/icon.png" />
-				</div>
-			</div>
 
-
-		
-			<div class="widget">			
-			<h1 class="site-title">
-				<a href="http://lepouf.info/" title="lePouf" rel="home">
-					LePouf
-					</a>
-				</h1>	
-			<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-			</div> 
- 		*/
-?>
 	<?php if ( ! dynamic_sidebar( 'top-sidebar' ) ) : ?><?php endif; ?>
 
 			<div class="widget">

@@ -4,7 +4,7 @@
  *
  * The area of the page that contains both current comments
  * and the comment form. The actual display of comments is
- * handled by a callback to athemes_comment() which is
+ * handled by a callback to hepouf_comment() which is
  * located in the inc/template-tags.php file.
  *
  * @package aThemes
@@ -34,7 +34,7 @@ if ( post_password_required() )
 		</h3>
 
 		<ol class="comment-list">
-			<?php wp_list_comments( array( 'callback' => 'athemes_comment', 'avatar_size' => 60 ) ); ?>
+			<?php wp_list_comments( array( 'callback' => 'hepouf_comment', 'avatar_size' => 60 ) ); ?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>

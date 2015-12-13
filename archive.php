@@ -1,10 +1,6 @@
 <?php
 /**
  * The template for displaying Archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package aThemes
  */
 
 get_header(); ?>
@@ -123,7 +119,7 @@ get_header(); ?>
 				
 		</div>
 		<?php endwhile; ?>
-			<?php athemes_content_nav( 'nav-below' ); ?>
+			<?php hepouf_content_nav( 'nav-below' ); ?>
 		<?php else : ?>
 			<?php get_template_part( 'no-results', 'archive' ); ?>
 		<?php endif; ?>

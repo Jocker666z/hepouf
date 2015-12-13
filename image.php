@@ -37,7 +37,7 @@ get_header();
 				<div class="entry-content">
 					<div class="entry-attachment">
 						<div class="attachment">
-							<?php athemes_the_attached_image(); ?>
+							<?php hepouf_the_attached_image(); ?>
 						<!-- .attachment --></div>
 		<?php the_content(); ?>
 						<?php if ( has_excerpt() ) : ?>

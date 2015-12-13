@@ -42,7 +42,7 @@ get_header();
         
 		<div class="share-post "><?php wp_related_posts()?></div>
 
-			<?php athemes_content_nav( 'nav-below' ); ?>
+			<?php hepouf_content_nav( 'nav-below' ); ?>
 			
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
@@ -96,7 +96,7 @@ get_header();
 			<?php wp_related_posts()?>
         </div>
 
-			<?php athemes_content_nav( 'nav-below' ); ?>
+			<?php hepouf_content_nav( 'nav-below' ); ?>
 			
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template

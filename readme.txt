@@ -25,11 +25,6 @@ URL: http://fortawesome.github.com/Font-Awesome/
 License: SIL OFL 1.1
 Copyright: Dave Gandy (@davegandy)
 
-Entypo - Icon Fonts
-URL: http://www.entypo.com/
-License: SIL OFL 1.1
-Copyright: Daniel Bruce (@danielbruce_)
-
 Superfish - Dropdown menu jQuery plugin.
 URL: http://users.tpg.com.au/j_birch/plugins/superfish/
 License: MIT and GPL

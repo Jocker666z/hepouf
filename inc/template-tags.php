@@ -1,17 +1,13 @@
 <?php
 /**
  * Custom template tags for this theme.
- *
- * Eventually, some of the functionality here could be replaced by core features
- *
- * @package aThemes
  */
 
-if ( ! function_exists( 'athemes_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  */
-function athemes_content_nav( $nav_id ) {
+if ( ! function_exists( 'hepouf_content_nav' ) ) :
+function hepouf_content_nav( $nav_id ) {
 	global $wp_query, $post;
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
@@ -47,15 +43,15 @@ function athemes_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
-endif; // athemes_content_nav
+endif; // hepouf_content_nav
 
-if ( ! function_exists( 'athemes_comment' ) ) :
 /**
- * Template for comments and pingbacks.
- *
+ * Template for comments 
+ * It recommended to desactive pingbacks
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-function athemes_comment( $comment, $args, $depth ) {
+if ( ! function_exists( 'hepouf_comment' ) ) :
+function hepouf_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
@@ -115,13 +111,14 @@ function athemes_comment( $comment, $args, $depth ) {
 	<?php
 	endif;
 }
-endif; // ends check for athemes_comment()
+endif; // ends check for hepouf_comment()
 
-if ( ! function_exists( 'athemes_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
+ * Remove this, break the attached image
  */
-function athemes_the_attached_image() {
+if ( ! function_exists( 'hepouf_the_attached_image' ) ) :
+function hepouf_the_attached_image() {
 	$post                = get_post();
 	$attachment_size     = apply_filters( 'athemes_attachment_size', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
@@ -171,6 +168,7 @@ endif;
 
 /**
  * Returns true if a blog has more than 1 category
+ * Remove this, partialy break the theme
  */
 function athemes_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
@@ -193,16 +191,3 @@ function athemes_categorized_blog() {
 		return false;
 	}
 }
-
-/**
- * Flush out the transients used in athemes_categorized_blog
- */
-function athemes_category_transient_flusher() {
-	// Like, beat it. Dig?
-	delete_transient( 'all_the_cool_cats' );
-}
-add_action( 'edit_category', 'athemes_category_transient_flusher' );
-add_action( 'save_post',     'athemes_category_transient_flusher' );
-
-                            
-                            

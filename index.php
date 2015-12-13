@@ -30,7 +30,7 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-					<?php athemes_content_nav( 'nav-below' ); ?>
+					<?php hepouf_content_nav( 'nav-below' ); ?>
 
 				<?php else : ?>
 

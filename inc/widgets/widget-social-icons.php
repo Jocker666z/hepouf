@@ -1,9 +1,6 @@
 <?php
 /**
  * Social icons widget
- *
- * @package aThemes Widget Pack
- * @version 1.0 modified by r.barbarot for header use only
  */ 
 
 /**
@@ -20,7 +17,7 @@ class aThemes_Social_Icons extends WP_Widget {
 	 		'athemes_social_icons',
 			'Hepouf Header Social Icons',
 			array(
-				'description'	=> __( 'Display 3 links maximum in header only', 'athemes' )
+				'description'	=> __( 'Display 3 links maximum in sidebar only', 'athemes' )
 			)
 		);
 	}
@@ -33,82 +30,76 @@ class aThemes_Social_Icons extends WP_Widget {
 		$fields = array(
 			// Title
 			'widget_title' => array(
-				'athemes_widgets_name'			=> 'widget_title',
-				'athemes_widgets_title'			=> __( 'Title', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'widget_title',
+				'hepouf_widgets_title'			=> __( 'Title', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			
 			// Other fields
 			'rss' => array (
-				'athemes_widgets_name'			=> 'rss',
-				'athemes_widgets_title'			=> __( 'rss', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'rss',
+				'hepouf_widgets_title'			=> __( 'rss', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'twitter' => array (
-				'athemes_widgets_name'			=> 'twitter',
-				'athemes_widgets_title'			=> __( 'Twitter', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'twitter',
+				'hepouf_widgets_title'			=> __( 'Twitter', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'facebook' => array (
-				'athemes_widgets_name'			=> 'facebook',
-				'athemes_widgets_title'			=> __( 'Facebook', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'facebook',
+				'hepouf_widgets_title'			=> __( 'Facebook', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'linkedin' => array (
-				'athemes_widgets_name'			=> 'linkedin',
-				'athemes_widgets_title'			=> __( 'LinkedIn', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
-			),
-			'gplus' => array (
-				'athemes_widgets_name'			=> 'gplus',
-				'athemes_widgets_title'			=> __( 'Google+', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'linkedin',
+				'hepouf_widgets_title'			=> __( 'LinkedIn', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'pinterest' => array (
-				'athemes_widgets_name'			=> 'pinterest',
-				'athemes_widgets_title'			=> __( 'Pinterest', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'pinterest',
+				'hepouf_widgets_title'			=> __( 'Pinterest', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'youtube' => array (
-				'athemes_widgets_name'			=> 'youtube',
-				'athemes_widgets_title'			=> __( 'YouTube', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'youtube',
+				'hepouf_widgets_title'			=> __( 'YouTube', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'vimeo' => array (
-				'athemes_widgets_name'			=> 'vimeo',
-				'athemes_widgets_title'			=> __( 'Vimeo', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
-			),
-			'dribbble' => array (
-				'athemes_widgets_name'			=> 'dribbble',
-				'athemes_widgets_title'			=> __( 'Dribbble', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'vimeo',
+				'hepouf_widgets_title'			=> __( 'Vimeo', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'tumblr' => array (
-				'athemes_widgets_name'			=> 'tumblr',
-				'athemes_widgets_title'			=> __( 'Tumblr', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'tumblr',
+				'hepouf_widgets_title'			=> __( 'Tumblr', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'instagram' => array (
-				'athemes_widgets_name'			=> 'instagram',
-				'athemes_widgets_title'			=> __( 'Instagram', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'instagram',
+				'hepouf_widgets_title'			=> __( 'Instagram', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'lastfm' => array (
-				'athemes_widgets_name'			=> 'lastfm',
-				'athemes_widgets_title'			=> __( 'Last.fm', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'lastfm',
+				'hepouf_widgets_title'			=> __( 'Last.fm', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'soundcloud' => array (
-				'athemes_widgets_name'			=> 'soundcloud',
-				'athemes_widgets_title'			=> __( 'SoundCloud', 'athemes' ),
-				'athemes_widgets_field_type'		=> 'text'
+				'hepouf_widgets_name'			=> 'soundcloud',
+				'hepouf_widgets_title'			=> __( 'SoundCloud', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
+			),
+            'reddit' => array (
+				'hepouf_widgets_name'			=> 'reddit',
+				'hepouf_widgets_title'			=> __( 'Reddit', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
 			),
 		);
 
 		return $fields;
 	 }
-
 
 	/**
 	 * Front-end display of widget.
@@ -133,11 +124,11 @@ class aThemes_Social_Icons extends WP_Widget {
 				// Make array elements available as variables
 				extract( $widget_field );
 				// Check if field has value and skip title field
-				unset( $athemes_widgets_field_value );
-				if( isset( $instance[$athemes_widgets_name] ) && 'widget_title' != $athemes_widgets_name ) { 
-					$athemes_widgets_field_value = esc_attr( $instance[$athemes_widgets_name] ); 
-					if( '' != $athemes_widgets_field_value ) {	?>
-					<li><a href="<?php echo $athemes_widgets_field_value; ?>" title="<?php echo $athemes_widgets_title; ?>"><i class="ico-<?php echo $athemes_widgets_name; ?>"></i></a></li>
+				unset( $hepouf_widgets_field_value );
+				if( isset( $instance[$hepouf_widgets_name] ) && 'widget_title' != $hepouf_widgets_name ) { 
+					$hepouf_widgets_field_value = esc_attr( $instance[$hepouf_widgets_name] ); 
+					if( '' != $hepouf_widgets_field_value ) {	?>
+					<li><a href="<?php echo $hepouf_widgets_field_value; ?>" title="<?php echo $hepouf_widgets_title; ?>"><i class="ico-<?php echo $hepouf_widgets_name; ?>"></i></a></li>
 					<?php }
 				}
 			}
@@ -154,7 +145,7 @@ class aThemes_Social_Icons extends WP_Widget {
 	 * @param	array	$new_instance	Values just sent to be saved.
 	 * @param	array	$old_instance	Previously saved values from database.
 	 *
-	 * @uses	athemes_widgets_show_widget_field()		defined in widget-fields.php
+	 * @uses	hepouf_widgets_show_widget_field()		defined in widget-fields.php
 	 *
 	 * @return	array Updated safe values to be saved.
 	 */
@@ -168,8 +159,8 @@ class aThemes_Social_Icons extends WP_Widget {
 			extract( $widget_field );
 	
 			// Use helper function to get updated field values
-			$instance[$athemes_widgets_name] = athemes_widgets_updated_field_value( $widget_field, $new_instance[$athemes_widgets_name] );
-			echo $instance[$athemes_widgets_name];
+			$instance[$hepouf_widgets_name] = hepouf_widgets_updated_field_value( $widget_field, $new_instance[$hepouf_widgets_name] );
+			echo $instance[$hepouf_widgets_name];
 		}
 				
 		return $instance;
@@ -182,7 +173,7 @@ class aThemes_Social_Icons extends WP_Widget {
 	 *
 	 * @param array $instance Previously saved values from database.
 	 *
-	 * @uses	athemes_widgets_show_widget_field()		defined in widget-fields.php
+	 * @uses	hepouf_widgets_show_widget_field()		defined in widget-fields.php
 	 */
 	public function form( $instance ) {
 		$widget_fields = $this->widget_fields();
@@ -192,8 +183,8 @@ class aThemes_Social_Icons extends WP_Widget {
 		
 			// Make array elements available as variables
 			extract( $widget_field );
-			$athemes_widgets_field_value = isset( $instance[$athemes_widgets_name] ) ? esc_attr( $instance[$athemes_widgets_name] ) : '';
-			athemes_widgets_show_widget_field( $this, $widget_field, $athemes_widgets_field_value );
+			$hepouf_widgets_field_value = isset( $instance[$hepouf_widgets_name] ) ? esc_attr( $instance[$hepouf_widgets_name] ) : '';
+			hepouf_widgets_show_widget_field( $this, $widget_field, $hepouf_widgets_field_value );
 		
 		}	
 	}
