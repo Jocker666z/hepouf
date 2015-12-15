@@ -589,7 +589,7 @@ dd {
 	float: left;
 	}
 .site-content {
-	max-width: 660px;
+	width: 660px;
 	min-height: auto;
 	margin: 0 330px 0 0;
 	}
