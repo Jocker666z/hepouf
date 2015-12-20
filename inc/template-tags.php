@@ -27,7 +27,6 @@ function hepouf_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'athemes' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 

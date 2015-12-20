@@ -226,13 +226,14 @@ blockquote cite:before {
 table {
 	width: 100%;
 	margin-bottom: 20px;
+	border-collapse: separate;
 	}
 table th,
 table td {
 	padding: 8px;
 	line-height: 20px;
 	text-align: left;
-	vertical-align: top;
+	vertical-align: center;
 	border-top: 1px solid #d6d6d6;
 	}
 table th {
@@ -590,7 +591,6 @@ dd {
 	}
 .site-content {
 	width: 660px;
-	min-height: auto;
 	margin: 0 330px 0 0;
 	}
 .site-content-video .hentry {
@@ -1025,9 +1025,6 @@ object {
 /*--------------------------------------------- */
 /*	09	Navigation
 ----------------------------------------------- */
-.screen-reader-text {
-	display: none;
-}
 .single-post .site-content [class*="navigation"] {
 	margin: 15px 0 15px;
 	text-align: none;
@@ -1036,9 +1033,7 @@ object {
 .search .site-content [class*="navigation"],
 .archive .site-content [class*="navigation"] {
 	margin-bottom: 15px;
-	padding-top: 15px;
 	text-align: center;
-	overflow: hidden;
 	}
 .home .site-content [class*="navigation"] {
 	margin: 15px 0 15px;
