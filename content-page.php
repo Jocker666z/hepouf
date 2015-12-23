@@ -8,14 +8,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title">
+		<h2 class="entry-title">
 			<?php if($post->post_parent) {
     			$parent = $wpdb->get_row("SELECT post_title FROM $wpdb->posts WHERE ID = $post->post_parent");
      			$parent_link = get_permalink($post->post_parent); ?>
      			<a href="<?php echo $parent_link; ?>"><?php echo $parent->post_title; ?></a>
 			&rarr;<?php } ?>
 			<?php the_title(); ?>
-		</h1>
+		</h2>
+		<div class="border-h2"></div>
 		<div class="entry-meta">Dernière modification : Le <?php the_modified_date('j F, Y'); ?></div>
 	</header>
 

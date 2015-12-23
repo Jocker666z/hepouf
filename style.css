@@ -14,7 +14,7 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 ----------------------------------------------- */
 /*	01	Global
 	02	Text Elements
-	02.1			Title
+	02.1			Title, list & Paragraph
 	02.2			Links
 	02.3			pre & code
 	02.4			blockquote
@@ -52,8 +52,6 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 	15.2			Widgets, social icons
 ----------------------------------------------- */
 
-
-
 /*--------------------------------------------- */
 /*	01	Global
 ----------------------------------------------- */
@@ -81,12 +79,15 @@ body {
 /*--------------------------------------------- */
 /*	02	Text Elements
 ----------------------------------------------- */
-
-/*	02.1	Text Elements: Title & Paragraph
+/*	02.1	Text Elements: Title, list & Paragraph
 ----------------------------------------------- */
 p {
 	margin: 0 0 20px 0;
 	}
+p + ol,
+p + ul {
+	margin: -15px 0px 20px 25px;
+}
 h1, h2, h3, h4, h5, h6 {
 	margin: 1.25em 0 .5em;
 	color: #222;
@@ -140,8 +141,8 @@ a:active {
 /*	02.3	Text Elements: pre & code
 ----------------------------------------------- */
 pre {
-    display: block;
-    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+	display: block;
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
 	font-size: 13px;
 	line-height: 28px;
 	background-size: 100% 56px;  
@@ -154,9 +155,9 @@ pre {
 	overflow-x: auto;
 	}
 code {
-    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
-    white-space: pre;
-    background: #f6f6f6;
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+	white-space: pre;
+	background: #f6f6f6;
 	padding: 1px 0 1px 0;
 	border-top: 1px solid #d6d6d6;
 	border-bottom: 1px solid #d6d6d6;
@@ -171,7 +172,6 @@ blockquote {
   	border-left: 5px solid #d6d6d6;
 	overflow: hidden;
 	}
-.format-video blockquote p,
 blockquote p {
   	font-size: 16px;
 	font-style: italic;
@@ -406,7 +406,6 @@ dd {
 /*--------------------------------------------- */
 /*	03	Header
 ----------------------------------------------- */
-
 /*	03.1	Header: Site title & description
 ----------------------------------------------- */
 .site-title {
@@ -1356,32 +1355,30 @@ p.comment-form-author {
 
 .sidebar-entry {
 	width: 100%;
-	height: 94px;
 	overflow: hidden;
 	margin: 0 0 6px 3px;
 	}
 .sidebar-entry-music {
 	width: 100%;
-	display: block;
-	height: 150px;
 	margin: 10px 0 6px 0;
 	padding-left: 2px;
+	line-height: 16px;
 	overflow: hidden;
 	}
-
+.sidebar-thumbnail-music {
+	width: 92px;
+	margin-right: 8px;
+	}
+.sidebar-thumbnail {
+	height: 94px;
+	}
 .sidebar-thumbnail-music,
 .sidebar-thumbnail {
 	position: relative;
 	float: left;
 	width: 94px;
-	height: 94px;
 	margin-right: 6px;
 	z-index:2;
-	}
-.sidebar-thumbnail-music {
-	width: 92px;
-	height: 92px;
-	margin-right: 8px;
 	}
 
 .sidebar-thumbnail img {
@@ -1427,7 +1424,7 @@ p.comment-form-author {
 	z-index:2;
 	}
 .sidebar-thumbnail-title-music {
-	width: 94px;
+	width: 95px;
 	}
 
 .sidebar-thumbnail-title a {
@@ -1445,7 +1442,6 @@ p.comment-form-author {
 	text-decoration: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 	z-index:3;
-	margin-bottom: 6px;
 	}
 
 .sidebar-bottom-link a {
@@ -1534,7 +1530,7 @@ p.comment-form-author {
 	width: 33.3%;
 	}
 .site-extra .widget {
-	margin: 0 15px 30px;
+	margin: 0 15px 0;
 	padding: 0;
 	border: none;
 	}
@@ -1604,7 +1600,7 @@ ul.recentcomments-block {
 	}
 
 .widget ul {
-	margin: 0 0 20px;
+	margin: 0;
 	padding: 0;
 	list-style: none;
 	}

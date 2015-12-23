@@ -46,7 +46,7 @@
 	endwhile;
 	?>
 </div>
-<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Voir les categories misent en avant">Retrouver les choses misent en avant</a></div>
+<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Voir les catégories misent en avant">Retrouver les choses misent en avant</a></div>
 
 <aside class="widget">
 <h3 class="widget-title"><span>À l'écoute</span></h3>
@@ -66,7 +66,7 @@
 	endwhile;
 	?>
 </div>
-<div class="sidebar-bottom-link"><a href="/category/musique/" title="Voir la categorie musique">Retrouver toute la musique</a></div>
+<div class="sidebar-bottom-link"><a href="/category/musique/" title="Voir la catégorie musique">Retrouver toute la musique</a></div>
 </aside>
 
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?><?php endif; ?>
