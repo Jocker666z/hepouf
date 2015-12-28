@@ -136,3 +136,30 @@ if ( strlen( $comment['comment_content'] ) < 4 ) {
     }
     return $comment;
 }
+
+/**
+ * Shortcodes for os support
+ */
+function lp_os_support_linux( ) {
+   $shortos = "<i class='ico-os-gnu-linux'></i>";
+   return $shortos;
+}
+add_shortcode( 'oslinux', 'lp_os_support_linux' );
+
+function lp_os_support_win( ) {
+   $shortos = "<i class='ico-os-win'></i>";
+   return $shortos;
+}
+add_shortcode( 'oswin', 'lp_os_support_win' );
+
+function lp_os_support_osx( ) {
+   $shortos = "<i class='ico-os-osx'></i>";
+   return $shortos;
+}
+add_shortcode( 'ososx', 'lp_os_support_osx' );
+
+function lp_os_support_android( ) {
+   $shortos = "<i class='ico-os-android'></i>";
+   return $shortos;
+}
+add_shortcode( 'osandroid', 'lp_os_support_android' );
