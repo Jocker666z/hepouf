@@ -1266,8 +1266,7 @@ p.comment-form-author {
 	}
 .form-allowed-tags {
     float: right;
-    width: 68%;
-    height: 48px;
+    width: 45%;
     padding-left: 8px;
     border-left: 5px solid #d6d6d6;
 	}
