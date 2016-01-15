@@ -17,7 +17,7 @@ class aThemes_Social_Icons extends WP_Widget {
 	 		'athemes_social_icons',
 			'Hepouf Header Social Icons',
 			array(
-				'description'	=> __( 'Display 3 links maximum in sidebar only', 'athemes' )
+				'description'	=> __( 'Display 5 links maximum in sidebar only', 'athemes' )
 			)
 		);
 	}
@@ -38,7 +38,12 @@ class aThemes_Social_Icons extends WP_Widget {
 			// Other fields
 			'rss' => array (
 				'hepouf_widgets_name'			=> 'rss',
-				'hepouf_widgets_title'			=> __( 'rss', 'hepouf' ),
+				'hepouf_widgets_title'			=> __( 'RSS', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
+			),
+			'github' => array (
+				'hepouf_widgets_name'			=> 'github',
+				'hepouf_widgets_title'			=> __( 'Github', 'hepouf' ),
 				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'twitter' => array (
