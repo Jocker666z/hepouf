@@ -86,7 +86,7 @@ p {
 	}
 p + ol,
 p + ul {
-	margin: -15px 0px 20px 25px;
+	margin: -5px 0px 20px 25px;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 1.25em 0 .5em;
@@ -173,7 +173,7 @@ blockquote {
 	overflow: hidden;
 	}
 blockquote p {
-  	font-size: 16px;
+  	font-size: 15px;
 	font-style: italic;
 	line-height: 21px;
 	margin: 0 0 5px 15px;
@@ -183,17 +183,21 @@ blockquote p {
 blockquote cite {
 	float: left;
 	width: 100%;
-	color: #999;
+	color: #353535;
 	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-	font-size: 19px;
+	font-size: 24px;
+    font-style: italic;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
 	letter-spacing: 1px;
-	margin: 5px 0 5px -15px;
+	margin: 10px 0 10px -15px;
 	padding: 0 3.5% 0 3.5%;
 	background: rgba(230, 230, 230, 0.9);
 	}
 blockquote cite:before {
 	content: "\223C \2009";
+	}
+blockquote cite:after {
+	content: "\2009 \223C";
 	}
 
 /*	02.5	Text Elements: List number in bold
