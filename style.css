@@ -977,12 +977,12 @@ img {
 .alignleft {
 	display: inline;
 	float: left;
-	margin: 0 1em 1em 0;
+	margin: 0 2em 1em 0;
 	}
 .alignright {
 	display: inline;
 	float: right;
-	margin: 0 0 1em 1em;
+	margin: 0 0 1em 2em;
 	}
 .home .aligncenter {
 	margin: 35px auto 0;
@@ -1023,7 +1023,9 @@ img {
 embed,
 iframe,
 object {
+	margin-top: 10px;
 	max-width: 100%;
+	text-align: center;
 	}
 
 /*--------------------------------------------- */
