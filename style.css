@@ -40,6 +40,7 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 	08.1			Media Elements: Caption
 	08.2			Media Elements: IMG
 	08.3			Media Elements: Gallery
+	08.4			Media Elements: Embed
 	09	Navigation
 	10	Comments
 	10.1			Comments: display
@@ -208,19 +209,28 @@ blockquote cite:after {
   	counter-reset:item;
 	}
 .entry-content ol>li {
-	padding-left: 2em;
-	text-indent:-2em;
-	list-style-type:none;
-	counter-increment:item;
+	text-indent: -2em;
+	list-style-type: none;
+	counter-increment: item;
+	margin: 0 0 0.4em 2em;
+	}
+.tag-la-track .entry-content ol>li {
+	margin: 0 0 0 2em;
+	padding: 0.4em 0 0.4em 0.4em;
+	border-bottom: 1px solid #e6e6e6;
+	}
+.tag-la-track .entry-content ol>li:hover {
+	background-color: #e6e6e6;
+	transition: all 0.15s linear;
 	}
 .entry-content ol>li:before {
-  	display:inline-block;
- 	width:1.5em;
- 	padding-right:0.5em;
+  	display: inline-block;
+ 	width: 1.5em;
+ 	padding-right: 0.5em;
 	font-style: italic;
- 	font-weight:bold;
-  	text-align:right;
-  	content:counter(item) ".";
+ 	font-weight: 500;
+  	text-align: right;
+  	content: counter(item) ".";
 	}
 .entry-content ul li {
 	margin-left: 2em;
@@ -1025,7 +1035,6 @@ iframe,
 object {
 	margin-top: 10px;
 	max-width: 100%;
-	text-align: center;
 	}
 
 /*--------------------------------------------- */

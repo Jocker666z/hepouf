@@ -42,7 +42,7 @@ add_action( 'after_setup_theme', 'hepouf_setup' );
  */
 function hepouf_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Top Sidebar', 'athemes' ),
+		'name'          => __( 'Top Sidebar', 'hepouf' ),
 		'id'            => 'top-sidebar',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
