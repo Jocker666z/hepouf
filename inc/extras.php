@@ -79,14 +79,6 @@ function more_customlink() {
 add_filter( 'the_content_more_link', 'more_customlink' );
 
 /**
- * 2 tags display limit
- */
-add_filter('term_links-post_tag','limit_to_two_tags');
-function limit_to_two_tags($terms) {
-return array_slice($terms,0,2,true);
-}
-
-/**
  * Remove WordPress's default padding on images with captions
  *
  * @param int $width Default WP .wp-caption width (image width + 10px)

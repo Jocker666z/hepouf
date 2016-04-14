@@ -1,10 +1,10 @@
 /*
-Theme Name: Hepouf
+Theme Name: Hepouf-v2
 Theme URI: http://lepouf.info/a-propos/themes/
-Author: aThemes Jocker
+Author: aThemes, Jocker
 Author URI: http://lepouf.info/a-propos/themes/
 Description:  Hepouf, it's modified Hiero magazine theme (http://athemes.com) for lepouf.info. Responsive layout, post thumbnails support, threaded comments, post format video & status support.
-Version: 1.0
+Version: 2.0
 License: GNU General Public License v3.0
 License URI: license.txt
 Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width-template, custom-menu
@@ -69,11 +69,11 @@ font-family: 'Yanone Kaffeesatz Thin';
 src: local('fonts/Yanone Kaffeesatz Thin'), url('fonts/YanoneKaffeesatz-Thin.woff') format('woff');
 }
 body {
+	background: #e0e0e0;
 	color: #333;
 	font-weight: 400;
 	font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
 	line-height: 1.6;
-	background: #e0e0e0;
 	margin: 0;
   	font-size: 14px;
 	}
@@ -83,7 +83,7 @@ body {
 /*	02.1	Text Elements: Title, list & Paragraph
 ----------------------------------------------- */
 p {
-	margin: 0 0 20px 0;
+	margin: 0 0 30px 0;
 	text-align: justify;
 	}
 p + ol,
@@ -125,7 +125,7 @@ h6 {
 /*	02.2	Text Elements: Links
 ----------------------------------------------- */
 a {						
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	outline: none;
 	-webkit-transition: all 0.14s ease 0s; 
 	-moz-transition: all 0.14s ease 0s; 
@@ -341,8 +341,8 @@ a.button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #ff2828;
-	border-color: #ff2828;
+	background: rgb(250, 52, 52);
+	border-color: rgb(250, 52, 52);
 	}
 
 /*	02.8	Text Elements: Clearing
@@ -389,7 +389,7 @@ time {
 	padding-right: 15px;
 	}
 .ffs-bs div a {  			/* Fruitful info-box */	
-	color: #FF2828;
+	color: rgb(250, 52, 52);
 	}
 .ffs-bs div a:hover {  			/* Fruitful info-box */	
 	color: #333;
@@ -449,6 +449,9 @@ dd {
 
 /*	03.2	Header: Menu
 ----------------------------------------------- */
+#main-navigation {
+	letter-spacing: 0.05em;
+	}
 .sf-menu ul {
 	margin: 0;
 	padding: 0;
@@ -511,23 +514,23 @@ dd {
 #main-navigation .sf-menu > ul > li.sfHover:after,
 #main-navigation .sf-menu > ul > li.current_page_item:after,
 #main-navigation .sf-menu > ul > li.current-menu-item:after {
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 #main-navigation li a {
 	margin: 0 -2px 0 0;
-	padding: 0 20px;
+	padding: 5px 20px;
 	color: #fff;
 	font-size: 1.2em;
 	font-weight: 400;
 	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-	line-height: 50px;
+	line-height: 40px;
 	}
 #main-navigation li:hover ul,
 #main-navigation li.sfHover ul {
-	top: 50px;
-	background: #ff2828;
+	top: 40px;
+	background: rgba(250, 52, 52, 0.95);
 	}
 #main-navigation li li:hover ul,
 #main-navigation li li.sfHover ul {
@@ -549,19 +552,19 @@ dd {
 #main-navigation li.current-page-ancestor > a,
 #main-navigation li.current_page_ancestor > a {
 	color: #fff;
-	background: #ff2828;
+	background: rgb(250, 52, 52);
 	}
 #main-navigation li:hover li a,
 #main-navigation li.sfHover li a {
 	margin: 0;
-	padding: 10px 20px;
+	padding: 8px 15px;
 	font-size: 1.1em;
 	text-transform: none;
 	line-height: normal;
 	}
 #main-navigation li:hover li a:hover,
 #main-navigation li.sfHover li a:hover {
-	background: #eb2121;
+	background: rgb(250, 52, 52);
 	}
 
 /*--------------------------------------------- */
@@ -576,7 +579,7 @@ dd {
 	background: url(img/logo-8.png) no-repeat;
 	background-size:contain;
 	display: block;
-	width: 1060px;
+	width: 1100px;
 	height: 80px;
 	margin: 8px auto;
 	}
@@ -585,7 +588,7 @@ dd {
 	background: #060608;
 	}
 #main-navigation {
-	width: 1060px;
+	width: 1100px;
 	margin: 0 auto;
 	clear: both;
 	padding: 0;
@@ -595,8 +598,8 @@ dd {
 	}
 .container {
 	background: #fff;
-	width: 1000px;
-    height: 100%;
+	width: 1040px;
+    	height: 100%;
 	box-shadow: 0px 2px 2px 0px rgba(20,20,20,0.2);
 	padding: 20px 30px 20px 30px;
 	}
@@ -604,11 +607,11 @@ dd {
 	float: left;
 	}
 .site-content {
-	width: 660px;
+	width: 700px;
 	margin: 0 330px 0 0;
 	}
 .site-content-video .hentry {
-	width: 1000px;
+	width: 1040px;
 	margin: 0;
 	}
 .site-sidebar {
@@ -689,30 +692,19 @@ dd {
 /*	05.2	Home: Status
 ----------------------------------------------- */
 .home .format-status {
-	position:relative;
-	min-height: 130px;
-	margin: 0 0 25px;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	z-index: 1;
-	}
-.home .format-status .entry-thumbnail2 {
-	display: none;
 	}
 
 /*--------------------------------------------- */
 /*	06	Content+Home
 ----------------------------------------------- */
 .home .post {
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	}
-
 .border-h2 {
 	max-width: 100%;
    	height: 1px;
 	background: linear-gradient(to right, rgba(250, 215, 215, 1) 0%, rgba(250, 205, 205, 0.8) 5%, rgba(250, 200, 200, 0.8) 15%, rgba(250, 180, 180, 0.8) 25%, rgba(250, 150, 150, 0.8) 35%, rgba(250, 100, 100, 0.8) 50%, rgba(250, 80, 80, 0.8) 66%, rgba(250, 65, 65, 0.9) 80%, rgba(250, 52, 52, 1) 100%);
 	}
-
 .date {
 	color: rgb(75,75,75);
 	line-height: 12px;
@@ -720,17 +712,10 @@ dd {
 	padding: 0 0 0 15px;
 	font-size: .875em;
 	}
-.date .date_d_m {
-	
-
-	}
 .date .date_y {
 	float: left;
 	height: 20px;
 	width: 20px;
-	}
-.date .date_h {
-
 	}
 
 /*--------------------------------------------- */
@@ -740,8 +725,8 @@ dd {
 ----------------------------------------------- */
 .hentry {
 	margin: 0 0 20px;
-	-ms-word-wrap: break-word;
-		word-wrap: break-word;
+	word-wrap: break-word;
+		-ms-word-wrap: break-word;
 	}
 .entry-header {
 	margin: 0;
@@ -755,7 +740,7 @@ dd {
 	text-decoration: none;
 	}
 .entry-title a:hover {
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 .entry-meta {
 	color: #999;
@@ -780,7 +765,7 @@ dd {
 	display: block;
 	}
 .entry-content {
-	margin: 7px 0 20px;
+	margin: 0 22px;
 	}
 .entry-footer {
 	padding: 0;
@@ -788,11 +773,14 @@ dd {
 	}
 .more-link,
 .page-links {
-	margin: 15px 0 0;
+	margin: 20px 0 0;
+	padding: 2px 15% 2px 0;
 	display: block;
 	font-weight : bold;
-	text-align: center;
+	text-align: right;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border-radius: 2px;
+	background: linear-gradient(to right, #f6f6f6 0, rgba(150, 150, 150, 0.12)50%, rgba(150, 150, 150, 0.15)100%);
 	}
 .post-password-required label {
 	float: left;
@@ -810,6 +798,29 @@ dd {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	text-align:center;
+	}
+
+.head-content-title {
+	position: relative;
+	padding: 20px 0 40px 0;
+	}
+.entry-content-meta {
+	background: linear-gradient(to left, #f6f6f6 0, #f9f9f9 100%);
+	padding: 5px 0 5px 0;
+	}
+.comments-link-entry-meta {
+	float: right;
+	padding-right: 5px;
+	}
+.head-content-tumbnail {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	float: left;
+	position: relative;
+	left: -50px;
+	z-index: 9999;
+	margin: 0 -30px 0 -10px;
 	}
 
 /*	07.1.1	Content: Stantard - footer
@@ -830,7 +841,7 @@ dd {
 .share-links a:hover {
 	top: -2px;
 	transition: all 0.2s linear;
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 body.search .page .entry-footer {
 	padding: 0;
@@ -874,7 +885,7 @@ a.wp_rp_thumbnail img {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 	}
 .share-post a:hover {
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 
 /*	07.2	Content: Video
@@ -987,12 +998,12 @@ img {
 .alignleft {
 	display: inline;
 	float: left;
-	margin: 0 2em 1em 0;
+	margin: 0 2em 1em -1.5em;
 	}
 .alignright {
 	display: inline;
 	float: right;
-	margin: 0 0 1em 2em;
+	margin: 0 -1.5em 1em 2em;
 	}
 .home .aligncenter {
 	margin: 35px auto 0;
@@ -1101,11 +1112,11 @@ object {
 	text-decoration: none;
 	width: 40px;
 	height: 40px;
-	background: #ff2828;
+	background: rgb(250, 52, 52);
 	border-radius: 50%;
 	}
 .site-content [class*="navigation"] a:hover {
-	background: #ff2828;
+	background: rgb(250, 52, 52);
 	}
 .site-content [class*="navigation"] [class^="ico-"]:before {
 	margin: 0;
@@ -1210,7 +1221,7 @@ a.comment_quote_link:hover,
 	text-decoration: none;
 	}
 .comment-list li.comment .comment-author .fn a:hover {
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 .comment-list li.comment .comment-level {
 	float: left;
@@ -1397,22 +1408,22 @@ p.comment-form-author {
 	}
 
 .sidebar-thumbnail img {
-	border-radius: 8px;
-    filter: brightness(60%);
-        -webkit-filter: brightness(60%);
-        -moz-filter: brightness(60%);
-        -o-filter: brightness(60%);
-        -ms-filter: brightness(60%);
+	border-radius: 2px;
+    	filter: brightness(90%);
+        -webkit-filter: brightness(90%);
+        -moz-filter: brightness(90%);
+        -o-filter: brightness(90%);
+        -ms-filter: brightness(90%);
 	box-shadow: none;
 	}
 .sidebar-thumbnail-music img {
 	border: black solid 2px;
 	border-radius: 50%;
-    filter: brightness(80%);
-        -webkit-filter: brightness(90%);
-        -moz-filter: brightness(90%);
-        -o-filter: brightness(90%);
-        -ms-filter: brightness(90%);
+    	filter: brightness(90%);
+        	-webkit-filter: brightness(90%);
+        	-moz-filter: brightness(90%);
+        	-o-filter: brightness(90%);
+        	-ms-filter: brightness(90%);
 	box-shadow: none;
 	}
 
@@ -1427,19 +1438,26 @@ p.comment-form-author {
 	border-radius: 50%;
 	}	
 
-.sidebar-thumbnail-title-music,
 .sidebar-thumbnail-title {
 	text-align: center;
 	font-style: normal;
-	letter-spacing: 0.10em;
-	font-weight: 550;
+	font-size: 11px;
+	padding: 0 1px 0 1px;
+	overflow: visible;
+	z-index: 2;
+	top: -38px;
+	position: relative;
+	background: rgba(1,1,1,0.3);
+	height: 38px;
+	}
+.sidebar-thumbnail-title-music {
+	width: 95px;
+	text-align: center;
+	font-style: normal;
 	font-size: 11px;
 	padding: 0 1px 0 1px;
 	overflow: visible;
 	z-index:2;
-	}
-.sidebar-thumbnail-title-music {
-	width: 95px;
 	}
 
 .sidebar-thumbnail-title a {
@@ -1447,15 +1465,13 @@ p.comment-form-author {
 	text-decoration: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 	position: relative;
-	top: -94px;
-	height: 94px;
 	z-index:3;
 	}
 .sidebar-thumbnail-title-music a {
 	display: block;
 	color: black;
 	text-decoration: none;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
 	z-index:3;
 	}
 
@@ -1469,7 +1485,7 @@ p.comment-form-author {
 	text-align: right;
 	}
 .sidebar-bottom-link a:hover {
-	color: #FF2828;
+	color: rgb(250, 52, 52);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	}
 
@@ -1501,7 +1517,7 @@ p.comment-form-author {
 	text-decoration: none;
 	}
 .site-footer a:hover {
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 .site-info {
 	float: left;
@@ -1526,7 +1542,7 @@ p.comment-form-author {
 	text-decoration: none;
 	}
 .site-extra .widget li a:hover {
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 .site-extra .pad {
 	margin: 0 -15px;
@@ -1575,7 +1591,7 @@ p.comment-form-author {
 	margin: 0 0 -1px;
 	display: inline-block;
 	line-height: 40px;
-	border-bottom: 2px solid #ff2828;
+	border-bottom: 2px solid rgb(250, 52, 52);
 	}
 .sidebar-block-fondu {
 	width: 100%;
@@ -1633,7 +1649,7 @@ ul.recentcomments-block {
 	color: #333;
 	}
 .widget li a:hover {
-	color: #ff2828;
+	color: rgb(250, 52, 52);
 	}
 
 /*	15.2	widget, Social Icons
