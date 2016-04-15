@@ -15,20 +15,11 @@ get_header();
 
 			<?php get_template_part( 'content', 'single' ); ?></div>
 
-	<div id="content" class="site-content" role="main">
-<footer>
-	<div class="entry-meta entry-footer">
-		<?php if ( 'post' == get_post_type() ) : ?>
-			<?php
-				$categories_list = get_the_category_list( __( ', ', 'athemes' ) );
-				if ( $categories_list && athemes_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( '<i class="ico-folder"></i>%1$s', 'athemes' ), $categories_list ); ?>
-			</span>
-			<?php endif; ?>
-		<?php endif; ?>
 
+
+<div id="content" class="site-content-bottom" role="main">
+<footer>
+<div class="entry-meta entry-footer">
 </div>
 	<!-- .entry-meta --></footer>
 

@@ -610,6 +610,10 @@ dd {
 	width: 700px;
 	margin: 0 330px 0 0;
 	}
+.site-content-bottom {
+	width: 700px;
+	margin: 0 auto;
+	}
 .site-content-video .hentry {
 	width: 1040px;
 	margin: 0;
@@ -847,7 +851,6 @@ body.search .page .entry-footer {
 	padding: 0;
 	border-top: none;
 	}
-
 .share-post {
 	background: #f6f6f6;
 	border-bottom: 3px solid #C0C0C0;
@@ -892,79 +895,16 @@ a.wp_rp_thumbnail img {
 ----------------------------------------------- */
 .single .format-video {
 	background: #fff;
-	overflow: hidden;
 	}
-.format-video p {
-	margin-bottom: 25px;
-}
-.format-video .size-full:after {
+.single .format-video .entry-content {
+	margin: 0 22px;
+	padding: 0 10% 0 10%;
 	}
-.format-video .size-full {
-	border-radius: 2px 2px 0 0;
-	box-shadow: 0px -5px 10px 1px rgba(190,190,190,0.8);
+.format-video .alignleft {
+	margin: 2.50em 2.5em 2.5em -8.8em;
 	}
-.format-video .alignleft img {
-	box-shadow: 2px -2px 10px 2px rgba(190,190,190,0.8);
-	}
-.format-video .alignright img {
-	box-shadow: -2px -2px 10px 2px rgba(190,190,190,0.8);
-	}
-.format-video .wp-caption {
-	overflow: visible;
-	max-width: 100%;
-	margin-bottom: -70px;
-	}
-.format-video .wp-caption p {
-	border-bottom: 2px solid rgba(255, 40, 40, 0.8);
-	background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-	margin-bottom: 20px;
-	}
-.format-video .wp-caption p:hover {
-	border-color: rgba(255, 40, 40, 1.0);
-	transition: all 1.5s linear;
-	}
-.format-video .wp-caption-text {
-	position: relative;
-	top: -70px;
-	height: 48px;
-	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-	letter-spacing: 0.15em;
-	color: #fff;
-	font-weight: 700;
-	font-size: 19px;
-	font-style: normal;
-	text-align: left;
-	padding: 22px 0 0 15px;
-	}
-.format-video .wp-caption-text a {
-	font-style: italic;
-	text-transform: none;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	}
-.format-video .wp-caption-text a:hover {
-    color: #999;
-	}
-.format-video .alignleft .wp-caption-text,
-.format-video .alignright .wp-caption-text {
-	position: relative;
-	top: -70px;
-	height: 63px;
-	font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
-	letter-spacing: 0.10em;
-	color: #fff;
-	font-weight: 400;
-	font-size: 13px;
-	text-align: center;
-	padding: 5px 5px 2px 5px;
-	}
-.format-video div.alignleft.wp-caption p,
-.format-video div.alignright.wp-caption p {
-	border-bottom: 2px solid rgba(255, 40, 40, 0.8);
-	background: linear-gradient(to top, rgba(0,0,0,2), rgba(0,0,0,0.7));
-	}
-.format-video .alignleft .wp-caption-text a,
-.format-video .alignright .wp-caption-text a {
-	font-weight: bold;
+.format-video .alignright {
+	margin: 2.50em -8.8em 2.5em 2.5em;
 	}
 
 /*--------------------------------------------- */
@@ -972,38 +912,40 @@ a.wp_rp_thumbnail img {
 ----------------------------------------------- */
 /*	08.1	Media Elements: Caption
 ----------------------------------------------- */
-.format-status .wp-caption,
-.format-standard .wp-caption {
+.wp-caption {
 	overflow: visible;
 	max-width: 100%;
-	}
-.format-status .wp-caption-text,
-.format-standard .wp-caption-text {
-	white-space: pre-line;
-	color: rgb(75, 75, 75);
-	font-style: italic;
-	text-align: center;
-	margin: 0 0 20px 0;
-	padding: 5px 10px 7px 10px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	font-style: italic;
+	background: linear-gradient(to right, #f6f6f6 0, rgba(150, 150, 150, 0.12)50%, rgba(150, 150, 150, 0.15)100%);
+	border-radius: 0 0 0 20px;
 	}
-
+.wp-caption .size-full {
+	box-shadow: 0px -5px 10px 1px rgba(190,190,190,0.8);
+	}
+.wp-caption-text {
+	margin: 5px 5px 5px 0;
+	text-align: right;
+	}
+.wp-caption-text a {
+	font-weight: bold;
+	}
 
 /*	08.2	Media Elements: IMG
 ----------------------------------------------- */
 img {
 	border-radius: 2px;
-	box-shadow: 0px 5px 10px 1px rgba(190,190,190,0.8);
+	box-shadow: 2px -2px 20px 3px rgba(190,190,190,0.4);
 	}
 .alignleft {
 	display: inline;
 	float: left;
-	margin: 0 2em 1em -1.5em;
+	margin: 2.5em 2.5em 2.5em -1.5em;
 	}
 .alignright {
 	display: inline;
 	float: right;
-	margin: 0 -1.5em 1em 2em;
+	margin: 2.5em -1.5em 2.5em 2.5em;
 	}
 .home .aligncenter {
 	margin: 35px auto 0;
@@ -1051,17 +993,21 @@ object {
 /*--------------------------------------------- */
 /*	09	Navigation
 ----------------------------------------------- */
-.single-post .site-content [class*="navigation"] {
+.single-post .site-content [class*="navigation"],
+.single-post .site-content-bottom [class*="navigation"] {
 	margin: 15px 0 15px;
 	text-align: none;
 	overflow: hidden;
 	}
+.archive .site-content [class*="navigation"],
 .search .site-content [class*="navigation"],
-.archive .site-content [class*="navigation"] {
+.search .site-content-bottom [class*="navigation"],
+.archive .site-content-bottom [class*="navigation"] {
 	margin-bottom: 15px;
 	text-align: center;
 	}
-.home .site-content [class*="navigation"] {
+.home .site-content [class*="navigation"],
+.home .site-content-bottom [class*="navigation"] {
 	margin: 15px 0 15px;
 	text-align: center;
 	overflow: hidden;
@@ -1075,12 +1021,16 @@ object {
 	float: right;
 	text-align: right;
 	}
-.site-content [class*="navigation"] .pages {
+.site-content [class*="navigation"] .pages,
+.site-content-bottom [class*="navigation"] .pages {
 	display: none;
 	}
 .site-content [class*="navigation"] a.last,
 .site-content [class*="navigation"] a.first,
-.site-content [class*="navigation"] a {
+.site-content [class*="navigation"] a,
+.site-content-bottom [class*="navigation"] a.last,
+.site-content-bottom [class*="navigation"] a.first,
+.site-content-bottom [class*="navigation"] a {
 	display: inline-block;
 	margin: 0 5px;
 	color: #fff;
@@ -1094,14 +1044,16 @@ object {
 	background: #060608;
 	border-radius: 50%;
 	}
-.single-post .site-content [class*="navigation"] a {
+.single-post .site-content [class*="navigation"] a ,
+.single-post .site-content-bottom [class*="navigation"] a {
 	border-radius: 1px;
 	line-height: 26px;
 	width: auto;
 	height: auto;
 	padding: 5px 15px;
 	}
-.site-content [class*="navigation"] .current {
+.site-content [class*="navigation"] .current,
+.site-content-bottom [class*="navigation"] .current {
 	display: inline-block;
 	margin: 0 5px;
 	color: #fff;
@@ -1115,10 +1067,12 @@ object {
 	background: rgb(250, 52, 52);
 	border-radius: 50%;
 	}
-.site-content [class*="navigation"] a:hover {
+.site-content [class*="navigation"] a:hover,
+.site-content-bottom [class*="navigation"] a:hover {
 	background: rgb(250, 52, 52);
 	}
-.site-content [class*="navigation"] [class^="ico-"]:before {
+.site-content [class*="navigation"] [class^="ico-"]:before,
+.site-content-bottom [class*="navigation"] [class^="ico-"]:before {
 	margin: 0;
 	}
 
