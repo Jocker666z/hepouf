@@ -825,6 +825,7 @@ dd {
 	left: -50px;
 	z-index: 9999;
 	margin: 0 -30px 0 -10px;
+	box-shadow: -5px 0px 10px 0px rgba(190,190,190,0.7);
 	}
 
 /*	07.1.1	Content: Stantard - footer
@@ -855,16 +856,24 @@ body.search .page .entry-footer {
 	background: #f6f6f6;
 	border-bottom: 3px solid #C0C0C0;
 	padding: 5px 0 25px 0;
-	margin: 0;
+	margin: 0 0 35px 0;
 	white-space: nowrap;
+	overflow: hidden;
+	}
+.share-post h3 {
+	width: 50%;
+	margin: 25px auto 10px auto;
+	font-size: 1.50em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #D6D6D6;
+	}
+.related_post {
+	width: 50%;
+	margin: 0 auto 0 auto;
 	}
 .share-post ul {
 	list-style-type:none
-	}
-.related_post {
-	width: 80%;
-	overflow: hidden;
-	margin: 0 auto 0 auto;
 	}
 a.wp_rp_thumbnail img {
 	width: 35px;
@@ -872,14 +881,6 @@ a.wp_rp_thumbnail img {
 	border-radius: 50%;
 	margin: 1px 5px 0 5px;
 	box-shadow: none;
-	}
-.share-post h3 {
-	width: 80%;
-	margin: 25px auto 10px auto;
-	font-size: 1.50em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	border-bottom: 1px solid #D6D6D6;
 	}
 .share-post a {
 	color: black;
@@ -917,15 +918,18 @@ a.wp_rp_thumbnail img {
 	max-width: 100%;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	font-style: italic;
-	background: linear-gradient(to right, #f6f6f6 0, rgba(150, 150, 150, 0.12)50%, rgba(150, 150, 150, 0.15)100%);
-	border-radius: 0 0 0 20px;
+	}
+.wp-caption img {
+	border-radius: 2px 2px 0 0;
 	}
 .wp-caption .size-full {
 	box-shadow: 0px -5px 10px 1px rgba(190,190,190,0.8);
 	}
 .wp-caption-text {
-	margin: 5px 5px 5px 0;
+	background: linear-gradient(to right, #f6f6f6 0, rgba(150, 150, 150, 0.12)50%, rgba(150, 150, 150, 0.15)100%);
+	padding: 5px 5px 5px 0;
 	text-align: right;
+	border-radius: 0 0 2px 2px;
 	}
 .wp-caption-text a {
 	font-weight: bold;
@@ -934,7 +938,7 @@ a.wp_rp_thumbnail img {
 /*	08.2	Media Elements: IMG
 ----------------------------------------------- */
 img {
-	border-radius: 2px;
+	border-radius: 2px 2px 2px 2px;
 	box-shadow: 2px -2px 20px 3px rgba(190,190,190,0.4);
 	}
 .alignleft {
