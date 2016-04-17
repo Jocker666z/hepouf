@@ -819,7 +819,6 @@ dd {
 .head-content-tumbnail {
 	width: 150px;
 	height: 150px;
-	overflow: hidden;
 	float: left;
 	position: relative;
 	left: -50px;
@@ -827,7 +826,9 @@ dd {
 	margin: 0 -30px 0 -10px;
 	box-shadow: -5px 0px 10px 0px rgba(190,190,190,0.7);
 	}
-
+.head-content-tumbnail img {
+	border: 2px solid rgba(1,1,1,0.15);
+    }
 /*	07.1.1	Content: Stantard - footer
 ----------------------------------------------- */
 .share-links  {
@@ -1429,7 +1430,7 @@ p.comment-form-author {
 	display: block;
 	color: black;
 	text-decoration: none;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	z-index:3;
 	}
 
@@ -1567,19 +1568,41 @@ p.comment-form-author {
 	z-index: 99;
 	}
 ul.recentcomments-block {
-	white-space:nowrap;
-	overflow:hidden;
+	white-space: nowrap;
+	overflow: hidden;
 	z-index: 4;
 	}
+.recentcomments-firstline {
+    font-size: 1.05em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+	}
 .recentcomments .comment-author-link {
-	float:left;
-	color: rgb(75,75,75);
+	float: left;
+	color: rgb(50,50,50);
+    font-size: 1.1em;
 	font-style: italic;
 	min-width: 10px;
 	border-right: 1px solid rgb(100,100,100);
 	padding: 0 5px 0 2px;
 	margin-right: 5px;
 	}
+.recentcomments .comment-excerpt {
+    white-space: initial;
+    font-size: 0.95em;
+    margin: 0 10px 5px 20px;
+    display: block;
+    text-align: justify;
+	}
+.recentcomments-endexcerpt {
+    font-size: 1.8em;
+    margin-left: 2px;
+    font-weight: bold;
+    float: left;
+    display: block;
+    height: 100%;
+    top: 4px;
+    position: relative;
+}
 .wp_rp_footer {
 	display: none;
 	}
