@@ -69,11 +69,11 @@ font-family: 'Yanone Kaffeesatz Thin';
 src: local('fonts/Yanone Kaffeesatz Thin'), url('fonts/YanoneKaffeesatz-Thin.woff') format('woff');
 }
 body {
-	background: #e0e0e0;
+	background: rgb(224,224,224);
 	color: #333;
 	font-weight: 400;
 	font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
-	line-height: 1.6;
+	line-height: 1.5em;
 	margin: 0;
   	font-size: 14px;
 	}
@@ -179,7 +179,7 @@ blockquote p {
   	font-size: 15px;
 	font-style: italic;
 	line-height: 21px;
-	margin: 0 0 5px 15px;
+	margin: 0 0 15px 15px;
 	padding-right: 10px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	}
@@ -193,7 +193,7 @@ blockquote cite {
 	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
 	letter-spacing: 1px;
 	margin: 10px 0 10px -15px;
-	padding: 0 3.5% 0 3.5%;
+	padding: 1.5%;
 	background: rgba(230, 230, 230, 0.9);
 	}
 blockquote cite:before {
@@ -601,15 +601,15 @@ dd {
 	background: #fff;
 	width: 1040px;
     	height: 100%;
-	box-shadow: 0px 2px 2px 0px rgba(20,20,20,0.2);
 	padding: 20px 30px 20px 30px;
+	box-shadow: 0 10px 40px -18px rgb(1,1,1);
 	}
 .content-area {
 	float: left;
 	}
 .site-content {
 	width: 700px;
-	margin: 0 330px 0 0;
+	margin: 8px 330px 0 0;
 	}
 .site-content-bottom {
 	width: 700px;
@@ -617,7 +617,7 @@ dd {
 	}
 .site-content-video .hentry {
 	width: 1040px;
-	margin: 0;
+	margin: 8px 0 0 0;
 	}
 .site-sidebar {
 	width: 300px;
@@ -739,6 +739,7 @@ dd {
 .entry-title {
 	margin: 0 20px 0 0;
 	font-size: 2.3em;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	white-space: nowrap;
 	}
 .entry-title a {
@@ -808,7 +809,7 @@ dd {
 
 .head-content-title {
 	position: relative;
-	padding: 20px 0 40px 0;
+	padding: 10px 0 40px 0;
 	}
 .entry-content-meta {
 	background: linear-gradient(to left, #f6f6f6 0, #f9f9f9 100%);
@@ -819,13 +820,9 @@ dd {
 	padding-right: 5px;
 	}
 .head-content-tumbnail {
-background: linear-gradient(
-  to right,
-  rgba(255,255,255,0) 10px,
-  rgba(255,255,255,0) 150px
-);
-	width: 150px;
-	height: 150px;
+	background: linear-gradient(to right, rgba(255,255,255,0) 10px, rgba(255,255,255,0) 150px);
+	width: 130px;
+	height: 130px;
 	float: left;
 	position: relative;
 	left: -50px;
@@ -834,8 +831,8 @@ background: linear-gradient(
 	box-shadow: -5px 0px 10px 0px rgba(190,190,190,0.7);
 	}
 .head-content-tumbnail img {
-	border: 2px solid rgba(1,1,1,0.15);
-    }
+	border: 2px solid rgb(225,225,225);
+	}
 /*	07.1.1	Content: Stantard - footer
 ----------------------------------------------- */
 .share-links  {
@@ -1373,14 +1370,13 @@ p.comment-form-author {
 	margin-right: 6px;
 	z-index:2;
 	}
-
 .sidebar-thumbnail img {
 	border-radius: 2px;
     	filter: brightness(90%);
-        -webkit-filter: brightness(90%);
-        -moz-filter: brightness(90%);
-        -o-filter: brightness(90%);
-        -ms-filter: brightness(90%);
+        	-webkit-filter: brightness(90%);
+        	-moz-filter: brightness(90%);
+        	-o-filter: brightness(90%);
+        	-ms-filter: brightness(90%);
 	box-shadow: none;
 	}
 .sidebar-thumbnail-music img {
@@ -1412,10 +1408,10 @@ p.comment-form-author {
 	padding: 0 1px 0 1px;
 	overflow: visible;
 	z-index: 2;
-	top: -38px;
+	top: -95px;
 	position: relative;
 	background: rgba(1,1,1,0.3);
-	height: 38px;
+	border-radius: 2px 2px 0 0;
 	}
 .sidebar-thumbnail-title-music {
 	width: 95px;
@@ -1426,7 +1422,6 @@ p.comment-form-author {
 	overflow: visible;
 	z-index:2;
 	}
-
 .sidebar-thumbnail-title a {
 	color: #fff;
 	text-decoration: none;
@@ -1441,7 +1436,6 @@ p.comment-form-author {
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	z-index:3;
 	}
-
 .sidebar-bottom-link a {
 	display: block;
 	font-style: italic;
@@ -1455,16 +1449,14 @@ p.comment-form-author {
 	color: rgb(250, 52, 52);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	}
-
 .sidebar-thumbnail-title a:hover {
 	color: rgb(232,232,232);
 	}
-
 .widget .sidebar-search  input,
 .widget .sidebar-search  textarea,
 .widget .sidebar-search  .uneditable-input {
 	width: 280px;
-    }
+	}
 
 /*--------------------------------------------- */
 /*	13	Footer
@@ -1553,12 +1545,15 @@ p.comment-form-author {
 	letter-spacing: 2px;
 	border-bottom: 1px solid #d6d6d6;
 	text-align: left;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border-top-left-radius: 2px;
 	}
 .widget-title span {
 	margin: 0 0 -1px;
+	padding-left: 10px;
 	display: inline-block;
 	line-height: 40px;
-	border-bottom: 2px solid rgb(250, 52, 52);
+	border-bottom: 1px solid rgb(250, 52, 52);
 	}
 .sidebar-block-fondu {
 	width: 100%;
@@ -1581,13 +1576,13 @@ ul.recentcomments-block {
 	z-index: 4;
 	}
 .recentcomments-firstline {
-    font-size: 1.05em;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+	font-size: 1.05em;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	}
 .recentcomments .comment-author-link {
 	float: left;
 	color: rgb(50,50,50);
-    font-size: 1.1em;
+	font-size: 1.1em;
 	font-style: italic;
 	min-width: 10px;
 	border-right: 1px solid rgb(100,100,100);
@@ -1600,6 +1595,7 @@ ul.recentcomments-block {
     margin: 0 10px 5px 20px;
     display: block;
     text-align: justify;
+	line-height: 16px;
 	}
 .recentcomments-endexcerpt {
     font-size: 1.8em;

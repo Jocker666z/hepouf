@@ -155,3 +155,9 @@ function lp_os_support_android( ) {
    return $shortos;
 }
 add_shortcode( 'osandroid', 'lp_os_support_android' );
+
+/**
+ * Add support of embed media in comments
+ */
+add_filter( 'comment_text', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'comment_text', array( $wp_embed, 'autoembed'), 8 );
