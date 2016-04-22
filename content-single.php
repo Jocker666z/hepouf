@@ -12,15 +12,16 @@
 
 	<div class="head-content-title">
 	<h2 class="entry-title"><?php the_title(); ?></h2>
-	<div class="border-h2"></div>
+
 	<div class="entry-content-meta">
 		<div class="entry-meta">
 			<i class="ico-user"></i><?php the_author_posts_link(); ?>
-			<span class="cat-links"><i class="ico-calendar"></i><?php the_time('d/m/Y\ à G\:i'); ?></span>
+			<span class="calendar-meta"><i class="ico-calendar"></i><?php the_time('d/m/Y\ à G\:i'); ?></span>
 
-			<span class="comments-link-entry-meta"><i class="ico-comment"></i>	
-			<?php echo sprintf(__('<a href="%s">%s Commentaire(s)</a>','textdomain'),get_comments_link(),get_comments_number()); ?>
+			<span class="comments-link-entry-meta">
+			<?php echo sprintf(__('<a href="%s">%s <i class="ico-comment"></i></a>','textdomain'),get_comments_link(),get_comments_number()); ?>
 			</span>
+
 			</br>
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<?php
@@ -43,7 +44,7 @@
 			<?php endif; ?>
 	</div>
 	</div>
-	<div class="border-h2"></div>
+
 	<!-- .entry-meta --></div>
 
 	<!-- .entry-header --></header>
@@ -71,15 +72,17 @@
 
 	<div class="head-content-title">
 	<h2 class="entry-title"><?php the_title(); ?></h2>
-	<div class="border-h2"></div>
+
 	<div class="entry-content-meta">
 		<div class="entry-meta">
 			<i class="ico-user"></i><?php the_author_posts_link(); ?>
-			<span class="cat-links"><i class="ico-calendar"></i><?php the_time('d/m/Y\ à G\:i'); ?></span>
+			<span class="calendar-meta"><i class="ico-calendar"></i><?php the_time('d/m/Y\ à G\:i'); ?></span>
 
-			<span class="comments-link-entry-meta"><i class="ico-comment"></i>	
-			<?php echo sprintf(__('<a href="%s">%s Commentaire(s)</a>','textdomain'),get_comments_link(),get_comments_number()); ?>
+			<span class="comments-link-entry-meta">
+			<?php echo sprintf(__('<a href="%s">%s <i class="ico-comment"></i></a>','textdomain'),get_comments_link(),get_comments_number()); ?>
 			</span>
+
+
 			</br>
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<?php
@@ -102,7 +105,7 @@
 			<?php endif; ?>
 	</div>
 	</div>
-	<div class="border-h2"></div>
+
 	<!-- .entry-meta --></div>
 
 	<!-- .entry-header --></header>
