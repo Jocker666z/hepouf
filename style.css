@@ -499,14 +499,6 @@ dd {
 	width: 130px;
 	}
 #main-navigation .sf-menu > ul > li:after {
-	width: 1px;
-	float: left;
-	margin: 15px 0 0;
-	content: "|";
-	display: block;
-	color: #666;
-	font-size: 1em;
-	font-family: Arial, Helvetica, sans-serif;
 	}
 #main-navigation .sf-menu > ul > li:last-child:after {
 	display: none;
@@ -553,7 +545,7 @@ dd {
 #main-navigation li.current-page-ancestor > a,
 #main-navigation li.current_page_ancestor > a {
 	color: #fff;
-	background: rgb(250, 52, 52);
+	background-color: rgb(250, 52, 52);
 	}
 #main-navigation li:hover li a,
 #main-navigation li.sfHover li a {
@@ -567,29 +559,35 @@ dd {
 #main-navigation li.sfHover li a:hover {
 	background: rgb(250, 52, 52);
 	}
+/*-----------Specific Home item----------------- */
+#main-navigation .sf-menu > ul > li.current-menu-item.menu-item-15670:after {
+	}
 
+#main-navigation li.menu-item-15670 a:hover,
+#menu-item-15670.menu-item-15670 a,
+#menu-item-15670.menu-item-15670 a:hover,
+#menu-item-15670.current-menu-item.menu-item-15670 a {
+	background: url(img/logo-10.png) no-repeat;
+	background-size: contain;
+	background-position: left center;
+    	text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+	font-size: 2em;
+	font-weight: 900;
+	width: 120px;
+	text-align: right;
+	margin: 5px 20px 5px 20px;
+	padding: 0;
+	background-color: rgb(1, 1, 1);
+	}
 /*--------------------------------------------- */
 /*	04	Layout
 ----------------------------------------------- */
-.site-branding-back {
-	float: left;
-	background: #16171b;
-	width: 100%;
-	}
-.site-branding {
-	background: url(img/logo-8.png) no-repeat;
-	background-size:contain;
-	display: block;
-	width: 1100px;
-	height: 80px;
-	margin: 8px auto;
-	}
 .main-navigation-back {
 	width: 100%;
 	background: #060608;
 	}
 #main-navigation {
-	width: 1100px;
+	width: 955px;
 	margin: 0 auto;
 	clear: both;
 	padding: 0;
