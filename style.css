@@ -29,8 +29,6 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 	03.2			Menu
 	04	Layout
 	05	Home
-	05.1			Home: Standard
-	05.2			Home: Status
 	06	Content+Home
 	07	Content
 	07.1			Content: Stantard
@@ -147,12 +145,11 @@ pre {
 	display: block;
 	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
 	font-size: 13px;
-	line-height: 28px;
-	background-size: 100% 56px;  
+	line-height: 28px; 
 	background: repeating-linear-gradient(to bottom, #e1e1e1 0, #e1e1e1 28px, #f6f6f6 28px, #f6f6f6 56px);
 	border-left: 10px solid #d6d6d6;
 	padding: 0 2px 0 15px;
-	margin: 10px 0 35px 0;
+	margin: 10px 0 30px 0;
   	word-wrap: normal;
   	white-space: pre;
 	overflow-x: auto;
@@ -510,7 +507,6 @@ dd {
 	color: rgb(250, 52, 52);
 	}
 #main-navigation li a {
-	margin: 0 -2px 0 0;
 	padding: 5px 20px;
 	color: #fff;
 	font-size: 1.2em;
@@ -560,9 +556,6 @@ dd {
 	background: rgb(250, 52, 52);
 	}
 /*-----------Specific Home item----------------- */
-#main-navigation .sf-menu > ul > li.current-menu-item.menu-item-15670:after {
-	}
-
 #main-navigation li.menu-item-15670 a:hover,
 #menu-item-15670.menu-item-15670 a,
 #menu-item-15670.menu-item-15670 a:hover,
@@ -575,22 +568,29 @@ dd {
 	font-weight: 900;
 	width: 120px;
 	text-align: right;
-	margin: 5px 20px 5px 20px;
+	margin: 5px 20px 5px 0;
 	padding: 0;
-	background-color: rgb(1, 1, 1);
+	background-color: #060608;
+	}
+.menu-item-15630 {
+	border-right: 1px solid rgb(50,50,50);
+	border-left: 1px solid rgb(50,50,50);
+	}
+.menu-item-15632  {
+	border-right: 1px solid rgb(50,50,50);
 	}
 /*--------------------------------------------- */
 /*	04	Layout
 ----------------------------------------------- */
 .main-navigation-back {
 	width: 100%;
+	height: 50px;
 	background: #060608;
+	box-shadow: 0 10px 20px -18px rgb(1,1,1);
 	}
 #main-navigation {
-	width: 955px;
+	width: 1100px;
 	margin: 0 auto;
-	clear: both;
-	padding: 0;
 	}
 .site-main {
 	padding: 0;
@@ -599,7 +599,7 @@ dd {
 	background: #fff;
 	width: 1040px;
     	height: 100%;
-	padding: 20px 30px 20px 30px;
+	padding: 30px 30px 30px 30px;
 	margin-top: 20px;
 	box-shadow: 0 10px 40px -18px rgb(1,1,1);
 	}
@@ -607,8 +607,8 @@ dd {
 	float: left;
 	}
 .site-content {
+	max-width: 100%;
 	width: 700px;
-	margin: 0 330px 0 0;
 	}
 .site-content-bottom {
 	width: 700px;
@@ -620,23 +620,15 @@ dd {
 .site-sidebar {
 	width: 300px;
 	float: right;
-	margin: 0 0 0 -321px;
+	display: block;
 	padding: 0 0 0 20px;
 	}
 
 /*--------------------------------------------- */
 /*	05	Home
 ----------------------------------------------- */
-/*	05.1	Home: Standard
------------------------------------------------ */
-.home .format-video,
-.home .format-standard {
-	position:relative;
-	min-height: 222px;
-	margin: 0 0 30px;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	z-index: 1;
+.home .hentry {
+	margin: 0 0 80px 0;
 	}
 .home .entry-content div.clearfix,
 .home .ffs-sep,
@@ -646,25 +638,18 @@ dd {
 	display: none;
 	}
 
-/*	05.2	Home: Status
------------------------------------------------ */
-.home .format-status {
-	}
-
 /*--------------------------------------------- */
 /*	06	Content+Home
 ----------------------------------------------- */
-.home .post {
-	padding-bottom: 30px;
-	}
 
 /*--------------------------------------------- */
 /*	07	Content
 ----------------------------------------------- */
-/*	07.1	Content: Standard
+/*	07.1	Content: General
 ----------------------------------------------- */
 .hentry {
-	margin: 0 0 20px;
+	min-height: 222px;
+	margin: 0;
 	word-wrap: break-word;
 		-ms-word-wrap: break-word;
 	}
@@ -744,10 +729,9 @@ dd {
 	letter-spacing: 2px;
 	text-align:center;
 	}
-
 .head-content-title {
 	position: relative;
-	margin: 18px 0 40px 0px;
+	margin: 28px 0 40px 0px;
 	padding: 10px 0 0 0;
 	}
 .entry-content-meta {
@@ -812,7 +796,7 @@ body.search .page .entry-footer {
 	overflow: hidden;
 	}
 .share-post h3 {
-	width: 50%;
+	width: 80%;
 	margin: 25px auto 10px auto;
 	font-size: 1.50em;
 	text-transform: uppercase;
@@ -820,7 +804,7 @@ body.search .page .entry-footer {
 	border-bottom: 1px solid #D6D6D6;
 	}
 .related_post {
-	width: 50%;
+	width: 80%;
 	margin: 0 auto 0 auto;
 	}
 .share-post ul {
@@ -1046,9 +1030,6 @@ object {
 	}
 .comments-area {
 	margin: 25px 0 0 0;
-	}
-.comments-area .widget-title {
-	text-align: center;
 	}
 .comment-list {
 	margin: 0 0 20px;
