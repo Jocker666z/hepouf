@@ -649,7 +649,7 @@ dd {
 ----------------------------------------------- */
 .hentry {
 	min-height: 222px;
-	margin: 0;
+	margin: 0 0 20px 0;
 	word-wrap: break-word;
 		-ms-word-wrap: break-word;
 	}
@@ -787,14 +787,6 @@ body.search .page .entry-footer {
 	padding: 0;
 	border-top: none;
 	}
-.share-post {
-	background: #f6f6f6;
-	border-bottom: 3px solid #C0C0C0;
-	padding: 5px 0 25px 0;
-	margin: 0 0 35px 0;
-	white-space: nowrap;
-	overflow: hidden;
-	}
 .share-post h3 {
 	width: 80%;
 	margin: 25px auto 10px auto;
@@ -803,24 +795,36 @@ body.search .page .entry-footer {
 	letter-spacing: 1px;
 	border-bottom: 1px solid #D6D6D6;
 	}
+.share-post {
+	background: #f6f6f6;
+	border-bottom: 3px solid #C0C0C0;
+	padding: 5px 0 25px 0;
+	margin: 0 0 35px 0;
+	}
 .related_post {
-	width: 80%;
-	margin: 0 auto 0 auto;
+	overflow: hidden;
+	margin: 0 auto 20px auto;
 	}
 .share-post ul {
-	list-style-type:none
+	width: 680px;
+	list-style-type: none;
+	}
+ul.related_post li {
+	width: 150px;
+	float: left;
+	margin: 10px 10px 0 10px;
 	}
 a.wp_rp_thumbnail img {
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	margin: 1px 5px 0 5px;
 	box-shadow: none;
+	border-radius: 20% 20% 20% 0;
+	border: 2px solid rgb(225,225,225);
+	}
+.wp_rp_publish_date {
+	display: block;
+	font-style: italic;
 	}
 .share-post a {
 	color: black;
-	font-style: italic;
-	font-size: 15px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 	}
 .share-post a:hover {
@@ -1231,6 +1235,9 @@ p.comment-form-author {
 	padding: 10px;
 	z-index:5;
 	}
+.list-block-title .entry-title {
+	font-size: 2em;
+	}
 .tag-search-list {
 	margin-bottom: 35px;
 	}
@@ -1381,15 +1388,16 @@ p.comment-form-author {
 /*--------------------------------------------- */
 /*	13	Footer
 ----------------------------------------------- */
-.site-footer .container {
-	box-shadow: none;
-	background: #16171b;
-	border: none;
-	}
 .site-footer {
 	color: #999;
 	font-size: .9em;
 	background: #16171b;
+	}
+.site-footer .container {
+	margin-top: 0;
+	box-shadow: none;
+	background: #16171b;
+	border: none;
 	}
 .site-footer a {
 	color: #fff;
@@ -1405,16 +1413,15 @@ p.comment-form-author {
 /*--------------------------------------------- */
 /*	14	Site-extra
 ----------------------------------------------- */
-.site-extra .container {
-	box-shadow: none;
-	background: #060608;
-	border: none;
-	}
-
 .site-extra {
+	background: #060608;
 	color: #666;
 	font-size: .9em;
+	}
+.site-extra .container {
 	background: #060608;
+	box-shadow: none;
+	border: none;
 	}
 .site-extra .widget li a {
 	color: #999;

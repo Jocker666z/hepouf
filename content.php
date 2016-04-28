@@ -10,7 +10,7 @@
 
 	<div class="head-content-title">
 
-	<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+	<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php shortened_title(); ?></a></h2>
 	<div class="entry-content-meta">
 		<div class="entry-meta">
 			<i class="ico-user"></i><?php the_author_posts_link(); ?>

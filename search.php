@@ -13,10 +13,10 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Les résultats pour : %s', 'athemes' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Les r&eacute;sultats pour : %s', 'athemes' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			<!-- .page-header --></header>
 
-			<?php include (TEMPLATEPATH . "/searchform.php"); ?>
+			<?php get_search_form(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

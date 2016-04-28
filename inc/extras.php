@@ -121,10 +121,10 @@ add_action('init', 'list_of_allowed_tags_comments', 10);
 add_filter( 'preprocess_comment', 'lp_preprocess_comment' );
 function lp_preprocess_comment($comment) {
     if ( strlen( $comment['comment_content'] ) > 5000 ) {
-        wp_die('Votre commentaire est trop long. La limite est de 5000 caractères.');
+        wp_die('Votre commentaire est trop long. La limite est de 5000 caract&egrave;res.');
     }
 if ( strlen( $comment['comment_content'] ) < 4 ) {
-        wp_die('Votre commentaire est trop court. La limite est de 4 caractères.');
+        wp_die('Votre commentaire est trop court. La limite est de 4 caract&egrave;res.');
     }
     return $comment;
 }
@@ -161,3 +161,16 @@ add_shortcode( 'osandroid', 'lp_os_support_android' );
  */
 add_filter( 'comment_text', array( $wp_embed, 'run_shortcode' ), 8 );
 add_filter( 'comment_text', array( $wp_embed, 'autoembed'), 8 );
+
+/**
+ * Limit size of title
+ */
+function shortened_title() {
+$original_title = get_the_title();
+$title = html_entity_decode($original_title, ENT_QUOTES, "");
+$limit = "50";
+$ending="...";
+if(strlen($title) >= ($limit+3)) {
+$title = substr($title, 0, $limit) . $ending; }
+echo $title;
+}
