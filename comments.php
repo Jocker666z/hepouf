@@ -19,7 +19,7 @@ if ( post_password_required() )
 	return;
 ?>
 
-	<div class="dotted-space"></div>
+	<div class="separator-space"></div>
 
 	<div id="comments" class="comments-area">
 

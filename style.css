@@ -769,14 +769,14 @@ dd {
 	background: #f6f6f6;
 	border-bottom: 3px solid #C0C0C0;
 	text-align: center;
-	padding: 0;
-	margin: 0;
+	padding: 8px 0 7px 0;
 	}
 .share-links a {
 	position: relative;
 	color: black;
 	top: 0;
 	font-size: 20px;
+	margin: 0 5px;
 	}
 .share-links a:hover {
 	top: -2px;
@@ -796,21 +796,19 @@ body.search .page .entry-footer {
 	border-bottom: 1px solid #D6D6D6;
 	}
 .share-post {
-	background: #f6f6f6;
-	border-bottom: 3px solid #C0C0C0;
 	padding: 5px 0 25px 0;
-	margin: 0 0 35px 0;
+	margin: 0 0 25px 0;
 	}
 .related_post {
 	overflow: hidden;
 	margin: 0 auto 20px auto;
 	}
 .share-post ul {
-	width: 680px;
+	width: 580px;
 	list-style-type: none;
 	}
 ul.related_post li {
-	width: 150px;
+	width: 125px;
 	float: left;
 	margin: 10px 10px 0 10px;
 	}
@@ -1027,10 +1025,10 @@ object {
 ----------------------------------------------- */
 /*	10.1	Comments: display
 ----------------------------------------------- */
-.dotted-space {
-	width: 15%;
-	margin: 40px auto 0 auto;
-	border-bottom: 15px dotted #C0C0C0;
+.separator-space {
+	margin: 50px 0 40px 0;
+	height: 3px;
+	background-image: linear-gradient(to right, rgba(128, 128, 128, 0), rgba(128, 128, 128, 0.75), rgba(128, 128, 128, 0));
 	}
 .comments-area {
 	margin: 25px 0 0 0;
@@ -1156,12 +1154,12 @@ a.comment_quote_link:hover,
 /*	10.2	Comments: form
 ----------------------------------------------- */
 #reply-title {
-	margin: 30px 0 15px;
-	padding: 0 0 15px;
-	font-size: 1.5em;
-    text-align: center;
+	margin: 30px 0 10px;
 	text-transform: uppercase;
+	font-size: 1.6em;
+	padding: 0 0 10px 10px;
 	border-bottom: 1px solid #d6d6d6;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	}
 #cancel-comment-reply-link {
 	margin: 0 0 0 10px;
@@ -1386,7 +1384,7 @@ p.comment-form-author {
 	}
 
 /*--------------------------------------------- */
-/*	13	Footer
+/*	13	 Footer
 ----------------------------------------------- */
 .site-footer {
 	color: #999;
@@ -1411,7 +1409,7 @@ p.comment-form-author {
 	}
 
 /*--------------------------------------------- */
-/*	14	Site-extra
+/*	14 	Site-extra
 ----------------------------------------------- */
 .site-extra {
 	background: #060608;
@@ -1473,7 +1471,6 @@ p.comment-form-author {
 	border-bottom: 1px solid #d6d6d6;
 	text-align: left;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-	border-top-left-radius: 2px;
 	}
 .widget-title span {
 	margin: 0 0 -1px;
@@ -1506,34 +1503,25 @@ ul.recentcomments-block {
 	font-size: 1.05em;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	}
+.recentcomments .avatar {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	}
+li.recentcomments  {
+	line-height: 30px;
+	}
 .recentcomments .comment-author-link {
-	float: left;
 	color: rgb(50,50,50);
 	font-size: 1.1em;
 	font-style: italic;
-	min-width: 10px;
-	border-right: 1px solid rgb(100,100,100);
-	padding: 0 5px 0 2px;
-	margin-right: 5px;
+	border-right: 1px dotted rgb(128, 128, 128);
+	padding: 5px 10px 5px 5px;
+	margin: 0 5px;
 	}
-.recentcomments .comment-excerpt {
-    white-space: initial;
-    font-size: 0.95em;
-    margin: 0 10px 5px 20px;
-    display: block;
-    text-align: justify;
-	line-height: 16px;
+.recentcomments .recent-comment-title {
+	position: relative;
 	}
-.recentcomments-endexcerpt {
-    font-size: 1.8em;
-    margin-left: 2px;
-    font-weight: bold;
-    float: left;
-    display: block;
-    height: 100%;
-    top: 4px;
-    position: relative;
-}
 .wp_rp_footer {
 	display: none;
 	}
