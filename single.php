@@ -15,28 +15,20 @@ get_header();
 
 			<?php get_template_part( 'content', 'single' ); ?></div>
 
-	<div id="content" class="site-content" role="main">
-<footer>
-	<div class="entry-meta entry-footer">
-		<?php if ( 'post' == get_post_type() ) : ?>
-			<?php
-				$categories_list = get_the_category_list( __( ', ', 'athemes' ) );
-				if ( $categories_list && athemes_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( '<i class="ico-folder"></i>%1$s', 'athemes' ), $categories_list ); ?>
-			</span>
-			<?php endif; ?>
-		<?php endif; ?>
 
+
+<div id="content" class="site-content-bottom" role="main">
+<div class="last-edit">Dernière modification : <?php the_modified_author(); ?> le <?php the_modified_date('d/m/Y\ à G\hi'); ?></div>
+<footer>
+<div class="entry-meta entry-footer">
 </div>
 	<!-- .entry-meta --></footer>
 
-        <div class="share-links">
-			<a target="_blank" title="Envoyer par mail" href="mailto:?subject=<?php the_title_attribute(); ?>&body=<?php the_permalink(); ?>" rel="nofollow"><i class="ico-mail"></i></a>
-			<a style="margin-right:-5px" target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=260,width=700');return false;"><i class="ico-twitter"></i></a>
-			<a style="margin-right:-5px" target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><i class="ico-facebook"></i></a> 				
-			<a style="margin-right:-5px" target="_blank" title="Google +" href="https://plus.google.com/share?url=<?php the_permalink(); ?>&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><i class="ico-gplus"></i></a>
+			<div class="share-links">
+			<a style="margin-right:15px" target="_blank" title="Envoyer par mail" href="mailto:?subject=<?php the_title_attribute(); ?>&body=<?php the_permalink(); ?>" rel="nofollow"><i class="ico-mail"></i></a>
+			<a target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=260,width=700');return false;"><i class="ico-twitter"></i></a>
+			<a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><i class="ico-facebook"></i></a> 				
+			<a target="_blank" title="Google +" href="https://plus.google.com/share?url=<?php the_permalink(); ?>&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><i class="ico-gplus"></i></a>
 			<a target="_blank" title="Reddit" href="http://reddit.com/submit?url=<?php the_permalink(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=750,width=550');return false;"><i class="ico-reddit"></i></a>
 				</div>
         
@@ -67,31 +59,21 @@ get_header();
 			<?php get_template_part( 'content', 'single' ); ?></div>
 
 	<div id="content" class="site-content" role="main">
+<div class="last-edit">Dernière modification : <?php the_modified_author(); ?> le <?php the_modified_date('d/m/Y\ à G\hi'); ?></div>
 <footer>
-	<div class="entry-meta entry-footer">
-		<?php if ( 'post' == get_post_type() ) : ?>
-			<?php
-				$categories_list = get_the_category_list( __( ', ', 'athemes' ) );
-				if ( $categories_list && athemes_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( '<i class="ico-folder"></i>%1$s', 'athemes' ), $categories_list ); ?>
-			</span>
-			<?php endif; ?>
-		<?php endif; ?>
-
+<div class="entry-meta entry-footer">
 </div>
 
 	<!-- .entry-meta --></footer>
+
 			<div class="share-links">
-
-			<a target="_blank" title="Envoyer par mail" href="mailto:?subject=<?php the_title_attribute(); ?>&body=<?php the_permalink(); ?>" rel="nofollow"><i class="ico-mail"></i></a>
-			<a style="margin-right:-5px" target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=260,width=700');return false;"><i class="ico-twitter"></i></a>
-			<a style="margin-right:-5px" target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><i class="ico-facebook"></i></a> 				
-			<a style="margin-right:-5px" target="_blank" title="Google +" href="https://plus.google.com/share?url=<?php the_permalink(); ?>&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><i class="ico-gplus"></i></a>
+			<a style="margin-right:15px" target="_blank" title="Envoyer par mail" href="mailto:?subject=<?php the_title_attribute(); ?>&body=<?php the_permalink(); ?>" rel="nofollow"><i class="ico-mail"></i></a>
+			<a target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=260,width=700');return false;"><i class="ico-twitter"></i></a>
+			<a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><i class="ico-facebook"></i></a> 				
+			<a target="_blank" title="Google +" href="https://plus.google.com/share?url=<?php the_permalink(); ?>&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><i class="ico-gplus"></i></a>
 			<a target="_blank" title="Reddit" href="http://reddit.com/submit?url=<?php the_permalink(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=750,width=550');return false;"><i class="ico-reddit"></i></a>
-
 				</div>
+
 		<div class="share-post ">
 			<?php wp_related_posts()?>
         </div>

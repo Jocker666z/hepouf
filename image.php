@@ -57,7 +57,7 @@ get_header();
 				<!-- .entry-content --></div>
 
 				<nav role="navigation" id="image-navigation" class="image-navigation">
-					<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav"><i class="ico-left-open"></i></span> Précédente', 'athemes' ) ); ?></div>
+					<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav"><i class="ico-left-open"></i></span> Pr&eacute;c&eacute;dente', 'athemes' ) ); ?></div>
 					<div class="nav-next"><?php next_image_link( false, __( 'Suivante <span class="meta-nav"><i class="ico-right-open"></i></span>', 'athemes' ) ); ?></div>
 				<!-- #image-navigation --></nav>
 			<!-- #post-## --></article>
