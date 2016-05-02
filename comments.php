@@ -19,7 +19,7 @@ if ( post_password_required() )
 	return;
 ?>
 
-	<div class="separator-space"></div>
+	<div class="dotted-space"></div>
 
 	<div id="comments" class="comments-area">
 
@@ -48,7 +48,7 @@ if ( post_password_required() )
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :	?>
-		<p class="no-comments"><?php _e( 'Les commentaires sont ferm&eacute;s.', 'athemes' ); ?></p>
+		<p class="no-comments"><?php _e( 'Les commentaires sont fermés.', 'athemes' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form( array( 'comment_notes_after' => '<div class="form-allowed-tags">' . sprintf( __( 'Vous pouvez utiliser les 

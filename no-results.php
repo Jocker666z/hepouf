@@ -13,7 +13,7 @@
 		<h1 class="page-title"><?php _e( 'Pas de resultat', 'athemes' ); ?></h1>
 	<!-- .page-header --></header>
 
-	<?php get_search_form(); ?>
+	<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>

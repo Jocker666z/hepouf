@@ -83,7 +83,7 @@ function hepouf_comment( $comment, $args, $depth ) {
 						<?php
 							$user_info = get_userdata($comment->user_id);
 							if ( $user_info->display_name == Jocker ) {echo('Papi' . "\n");}
-							elseif ( $user_info->display_name == Shibo ) {echo('D&eacute;tective chiens et chats' . "\n");}
+							elseif ( $user_info->display_name == Shibo ) {echo('Détective chiens et chats' . "\n");}
 							elseif ( $user_info->display_name == Nath ) {echo('Graphistologue' . "\n");}
 							elseif ( $user_info->display_name == Manu ) {echo('Pierre Tchernia of the space' . "\n");}
 							elseif ( $user_info->display_name == Loo ) {echo('Maitre de guerre' . "\n");}
@@ -95,7 +95,7 @@ function hepouf_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-author -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Votre commentaire est en attente de mod&eacute;ration.', 'athemes' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Votre commentaire est en attente de modération.', 'athemes' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 

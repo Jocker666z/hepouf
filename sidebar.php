@@ -10,7 +10,7 @@
 	<?php if ( ! dynamic_sidebar( 'top-sidebar' ) ) : ?><?php endif; ?>
 
 			<div class="widget">
-				<div class="sidebar-search"><?php get_search_form(); ?></div>
+				<div class="sidebar-search"><?php include (TEMPLATEPATH . "/searchform.php"); ?></div>
 			</div>
 
 <div class="sidebar-entry">
@@ -46,10 +46,10 @@
 	endwhile;
 	?>
 </div>
-<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Voir les cat&eacute;gories misent en avant">Retrouver les choses misent en avant</a></div>
+<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Voir les catégories misent en avant">Retrouver les choses misent en avant</a></div>
 
 <aside class="widget">
-<h3 class="widget-title"><span>&Agrave; l'&eacute;coute</span></h3>
+<h3 class="widget-title"><span>À l'écoute</span></h3>
 <div class="sidebar-entry-music">
 	<?php query_posts('cat=447&showposts=3');
 	while (have_posts()) : the_post();
@@ -66,7 +66,7 @@
 	endwhile;
 	?>
 </div>
-<div class="sidebar-bottom-link"><a href="/category/musique/" title="Voir la cat&eacute;gorie musique">Retrouver toute la musique</a></div>
+<div class="sidebar-bottom-link"><a href="/category/musique/" title="Voir la catégorie musique">Retrouver toute la musique</a></div>
 </aside>
 
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?><?php endif; ?>
