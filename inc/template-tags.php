@@ -81,12 +81,13 @@ function hepouf_comment( $comment, $args, $depth ) {
 
 					<span class="comment-level">
 						<?php
-							$user_info = get_userdata($comment->user_id);
-							if ( $user_info->display_name == Jocker ) {echo('Papi' . "\n");}
-							elseif ( $user_info->display_name == Shibo ) {echo('D&eacute;tective chiens et chats' . "\n");}
-							elseif ( $user_info->display_name == Nath ) {echo('Graphistologue' . "\n");}
-							elseif ( $user_info->display_name == Manu ) {echo('Pierre Tchernia of the space' . "\n");}
-							elseif ( $user_info->display_name == Loo ) {echo('Maitre de guerre' . "\n");}
+							$user_info = get_comment_author( $comment_ID );
+							$user_info = strtolower($user_info);
+							if ( $user_info == jocker ) {echo('Papi' . "\n");}
+							elseif ( $user_info == shibo ) {echo('D&eacute;tective chiens et chats' . "\n");}
+							elseif ( $user_info == nath ) {echo('Graphistologue' . "\n");}
+							elseif ( $user_info == manu ) {echo('Pierre Tchernia of the space' . "\n");}
+							elseif ( $user_info == loo ) {echo('Maitre de guerre' . "\n");}
 						?> 
 					</br>
 					<span class="comment-count"><?php commentCount(); ?></span>	

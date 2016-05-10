@@ -143,7 +143,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
  */
 function load_html5shiv() {
     echo '<!--[if lt IE 9]>' . "\n";
-    echo '<script src="' . esc_url( get_template_directory_uri() . '/js/html5shiv.js' ) . '"></script>' . "\n";
+    echo '<script src="' . esc_url( get_template_directory_uri() . '/js/html5shiv.min.js' ) . '"></script>' . "\n";
     echo '<![endif]-->' . "\n";
 }
 add_action( 'wp_head', 'load_html5shiv' );

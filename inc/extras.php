@@ -168,9 +168,26 @@ add_filter( 'comment_text', array( $wp_embed, 'autoembed'), 8 );
 function shortened_title() {
 $original_title = get_the_title();
 $title = html_entity_decode($original_title, ENT_QUOTES, "");
-$limit = "50";
+$limit = "47";
 $ending="...";
 if(strlen($title) >= ($limit+3)) {
 $title = substr($title, 0, $limit) . $ending; }
 echo $title;
 }
+
+/**
+ * Move comment field to bottom
+ */
+function move_comment_field_to_bottom( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
+
+/**
+ * Clean not use emoji call 
+ */
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );

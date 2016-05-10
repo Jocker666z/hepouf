@@ -28,9 +28,7 @@
 	<?php
 	endwhile;
 	?>
-</div>
 
-<div class="sidebar-entry">
 	<?php query_posts('cat=10,-12,-635,-767&showposts=3');
 	while (have_posts()) : the_post();
 	  // do whatever you want
@@ -70,4 +68,5 @@
 </aside>
 
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?><?php endif; ?>
+<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Propos&eacute; votre lien">Propos&eacute; votre lien</a></div>
 <!-- #widget-area-2 --></div>

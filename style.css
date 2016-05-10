@@ -1,5 +1,5 @@
 /*
-Theme Name: Hepouf-v2
+Theme Name: Hepouf
 Theme URI: http://lepouf.info/a-propos/themes/
 Author: aThemes, Jocker
 Author URI: http://lepouf.info/a-propos/themes/
@@ -70,10 +70,10 @@ body {
 	background: rgb(224,224,224);
 	color: #333;
 	font-weight: 400;
-	font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
+	font-family: "Open Sans",Helvetica,Arial;
 	line-height: 1.5em;
 	margin: 0;
-  	font-size: 14px;
+  	font-size: 0.95em;
 	}
 /*--------------------------------------------- */
 /*	02	Text Elements
@@ -83,11 +83,12 @@ body {
 p {
 	margin: 0 0 30px 0;
 	text-align: justify;
+	line-height: 1.65em;
 	}
 p + ol,
 p + ul {
 	text-align: justify;
-	margin: -5px 0px 20px 25px;
+	margin: -5px 0px 30px 25px;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 1.25em 0 .5em;
@@ -173,7 +174,6 @@ blockquote {
 	overflow: hidden;
 	}
 blockquote p {
-  	font-size: 15px;
 	font-style: italic;
 	line-height: 21px;
 	margin: 0 0 15px 15px;
@@ -567,7 +567,7 @@ dd {
     	text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
 	font-size: 2em;
 	font-weight: 900;
-	width: 120px;
+	width: 130px;
 	text-align: right;
 	margin: 5px 20px 5px 0;
 	padding: 0;
@@ -612,7 +612,7 @@ dd {
 	width: 700px;
 	}
 .site-content-bottom {
-	width: 700px;
+	max-width: 700px;
 	margin: 0 auto;
 	}
 .site-content-video .hentry {
@@ -765,7 +765,6 @@ dd {
 	border-top: 1px solid rgb(250, 52, 52);
 	}
 .head-content-tumbnail {
-	background: linear-gradient(to right, rgba(255,255,255,0) 10px, rgba(255,255,255,0) 150px);
 	width: 130px;
 	height: 130px;
 	float: left;
@@ -822,14 +821,15 @@ body.search .page .entry-footer {
 	}
 .share-post {
 	padding: 5px 0 25px 0;
-	margin: 0 0 25px 0;
+	margin: 0 auto 25px auto;
+	max-width: 700px;
 	}
 .related_post {
 	overflow: hidden;
 	margin: 0 auto 20px auto;
 	}
 .share-post ul {
-	width: 580px;
+	max-width: 580px;
 	list-style-type: none;
 	}
 ul.related_post li {
@@ -865,10 +865,10 @@ a.wp_rp_thumbnail img {
 	padding: 0 10%;
 	}
 .single .format-video .alignleft {
-	margin: 2em 2em 2em -8.8em;
+	margin: 2em 2em 1.8em -8.8em;
 	}
 .single .format-video .alignright {
-	margin: 2em -8.8em 2em 2em;
+	margin: 0 -8.8em 1.8em 2em;
 	}
 
 /*--------------------------------------------- */
@@ -908,12 +908,12 @@ img {
 .alignleft {
 	display: inline;
 	float: left;
-	margin: 2em 2em 2em -1.5em;
+	margin: 2em 2em 1.8em -1.5em;
 	}
 .alignright {
 	display: inline;
 	float: right;
-	margin: 2em -1.5em 2em 2em;
+	margin: 0 -1.5em 1.8em 2em;
 	}
 .home .aligncenter {
 	margin: 35px auto 0;
@@ -954,7 +954,7 @@ img {
 embed,
 iframe,
 object {
-	max-width: 100%;
+	width: 100%;
 	}
 
 /*--------------------------------------------- */
@@ -1010,7 +1010,7 @@ object {
 	height: 40px;
 	background: #060608;
 	border-radius: 50%;
-	line-height: 1.7em;
+	line-height: 1.6em;
 	}
 .single-post .site-content [class*="navigation"] a ,
 .single-post .site-content-bottom [class*="navigation"] a {
@@ -1034,7 +1034,7 @@ object {
 	height: 40px;
 	background: rgb(250, 52, 52);
 	border-radius: 50%;
-	line-height: 1.7em;
+	line-height: 1.6em;
 	}
 .site-content [class*="navigation"] a:hover,
 .site-content-bottom [class*="navigation"] a:hover {
@@ -1110,7 +1110,6 @@ a.comment_quote_link:hover,
 	color: #333;
 	}
 .comment-content blockquote p {
-    	font-size: 14px;
     	font-style: italic;
     	line-height: 20px;
 	margin: 0 0 5px 15px;
@@ -1201,6 +1200,7 @@ a.comment_quote_link:hover,
 	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
 	letter-spacing: 2px;
 	text-align: left;
+	margin-left: 5px;
 	}
 p.comment-form-url,
 p.comment-form-email,
@@ -1213,7 +1213,7 @@ p.comment-form-author {
 	}
 .form-allowed-tags {
     	float: right;
-   	width: 55%;
+   	width: 60%;
     	padding-left: 8px;
     	border-left: 5px solid #d6d6d6;
 	}
@@ -1224,6 +1224,11 @@ p.comment-form-author {
 	padding: 1px 0 1px 0;
 	border-top: none;
 	border-bottom: none;
+	}
+.comment-notes .required {
+	font-size: 1.3em;
+	vertical-align: middle;
+		-moz-middle-with-baseline
 	}
 /*--------------------------------------------- */
 /*	11	List search & cat
@@ -1284,7 +1289,7 @@ p.comment-form-author {
 /*	12	Sidebar
 ----------------------------------------------- */
 .site-sidebar {
-	font-size: .9em;
+	font-size: .875em;
 	}
 .site-sidebar .widget_archive select,
 .site-sidebar .widget_categories select {
@@ -1302,7 +1307,7 @@ p.comment-form-author {
 	width: 100%;
 	margin: 10px 0 6px 0;
 	padding-left: 2px;
-	line-height: 16px;
+	line-height: 1rem;
 	overflow: hidden;
 	}
 .sidebar-thumbnail-music {
@@ -1317,7 +1322,7 @@ p.comment-form-author {
 	position: relative;
 	float: left;
 	width: 94px;
-	margin-right: 6px;
+	margin: 3px 6px 3px 0;
 	z-index:2;
 	}
 .sidebar-thumbnail img {
@@ -1354,7 +1359,7 @@ p.comment-form-author {
 .sidebar-thumbnail-title {
 	text-align: center;
 	font-style: normal;
-	font-size: 11px;
+	font-size: 0.925em;
 	padding: 0 1px 0 1px;
 	overflow: visible;
 	z-index: 2;
@@ -1367,7 +1372,7 @@ p.comment-form-author {
 	width: 95px;
 	text-align: center;
 	font-style: normal;
-	font-size: 11px;
+	font-size: 0.925em;
 	padding: 0 1px 0 1px;
 	overflow: visible;
 	z-index:2;
@@ -1491,6 +1496,7 @@ p.comment-form-author {
 .widget-title {
 	margin: 0;
 	font-size: 1.6em;
+	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	border-bottom: 1px solid #d6d6d6;
@@ -1525,24 +1531,20 @@ ul.recentcomments-block {
 	z-index: 4;
 	}
 .recentcomments-firstline {
-	font-size: 1.05em;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	}
 .recentcomments .avatar {
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
 	}
-li.recentcomments  {
-	line-height: 30px;
-	}
 .recentcomments .comment-author-link {
 	color: rgb(50,50,50);
-	font-size: 1.1em;
+	font-size: 1.05em;
 	font-style: italic;
 	border-right: 1px dotted rgb(128, 128, 128);
 	padding: 5px 10px 5px 5px;
 	margin: 0 5px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	}
 .recentcomments .recent-comment-title {
 	position: relative;
