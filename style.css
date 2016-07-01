@@ -159,7 +159,7 @@ code {
 	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
 	white-space: pre;
 	background: #f6f6f6;
-	padding: 1px 0 1px 0;
+	padding: 3px 0 2px 0;
 	border-top: 1px solid #d6d6d6;
 	border-bottom: 1px solid #d6d6d6;
 	}
@@ -243,10 +243,10 @@ table {
 	}
 table th,
 table td {
-	padding: 8px;
+	padding: 8px 15px 8px 15px;
 	line-height: 20px;
 	text-align: left;
-	vertical-align: center;
+	vertical-align: top;
 	border-top: 1px solid #d6d6d6;
 	}
 table th {
@@ -590,7 +590,7 @@ dd {
 	box-shadow: 0 10px 20px -18px rgb(1,1,1);
 	}
 #main-navigation {
-	width: 1100px;
+	width: 960px;
 	margin: 0 auto;
 	}
 .site-main {
@@ -634,8 +634,7 @@ dd {
 .home .entry-content div.clearfix,
 .home .ffs-sep,
 .home .format-video .wp-caption,
-.home .format-video img[class*="wp-image-"],
-.home .format-standard img[class*="wp-image-"] {
+.home .format-video img[class*="wp-image-"] {
 	display: none;
 	}
 
@@ -732,7 +731,7 @@ dd {
 	}
 .head-content-title {
 	position: relative;
-	margin: 28px 0 40px 22px;
+	margin: 25px 0 40px 22px;
 	padding: 10px 0 0 0;
 	z-index: 2;
 	}
@@ -865,7 +864,7 @@ a.wp_rp_thumbnail img {
 	padding: 0 10%;
 	}
 .single .format-video .alignleft {
-	margin: 2em 2em 1.8em -8.8em;
+	margin: 0 2em 1.8em -8.8em;
 	}
 .single .format-video .alignright {
 	margin: 0 -8.8em 1.8em 2em;
@@ -898,6 +897,9 @@ a.wp_rp_thumbnail img {
 .wp-caption-text a {
 	font-weight: bold;
 	}
+.aligncenter .wp-caption-text {
+	margin: 0 0 -0.5em 0;
+	}
 
 /*	08.2	Media Elements: IMG
 ----------------------------------------------- */
@@ -913,7 +915,7 @@ img {
 .alignright {
 	display: inline;
 	float: right;
-	margin: 0 -1.5em 1.8em 2em;
+	margin: 2em -1.5em 1.8em 2em;
 	}
 .home .aligncenter {
 	margin: 35px auto 0;
@@ -955,6 +957,13 @@ embed,
 iframe,
 object {
 	width: 100%;
+	}
+.comment-content p iframe {
+    	margin: 0 auto;	
+	display: block;
+	}
+.comment-content iframe {
+	width: 80%;
 	}
 
 /*--------------------------------------------- */
@@ -1363,7 +1372,7 @@ p.comment-form-author {
 	padding: 0 1px 0 1px;
 	overflow: visible;
 	z-index: 2;
-	top: -95px;
+	top: -94px;
 	position: relative;
 	background: rgba(1,1,1,0.3);
 	border-radius: 2px 2px 0 0;

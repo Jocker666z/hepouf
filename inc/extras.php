@@ -157,18 +157,12 @@ function lp_os_support_android( ) {
 add_shortcode( 'osandroid', 'lp_os_support_android' );
 
 /**
- * Add support of embed media in comments
- */
-add_filter( 'comment_text', array( $wp_embed, 'run_shortcode' ), 8 );
-add_filter( 'comment_text', array( $wp_embed, 'autoembed'), 8 );
-
-/**
  * Limit size of title
  */
 function shortened_title() {
 $original_title = get_the_title();
 $title = html_entity_decode($original_title, ENT_QUOTES, "");
-$limit = "47";
+$limit = "55";
 $ending="...";
 if(strlen($title) >= ($limit+3)) {
 $title = substr($title, 0, $limit) . $ending; }
@@ -191,3 +185,26 @@ add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
  */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+/**
+ * Fix <pre>
+ */
+function smart_code_escape_pre( $data ) {
+	preg_match('@(<code.*>)(.*)(<\/code>)@isU', $data[2], $matches );
+	if( !empty( $matches ) ) {
+		return $data[1] . $matches[1] . str_replace( array( '&', '<', '>' ), array( '&amp;', '&lt;', '&gt;' ), $matches[2] ) . $matches[3] . $data[3];
+	}
+	else {
+		return $data[1] . str_replace( array( '&', '<', '>' ), array( '&amp;', '&lt;', '&gt;' ), $data[2] ) . $data[3];
+	}
+}
+add_filter( 'the_content', 'smart_code_escape_content', 9 );
+function smart_code_escape_content( $content ) {
+	$content = preg_replace_callback('@(<pre.*>)(.*)(<\/pre>)@isU', 'smart_code_escape_pre', $content );
+	return $content;
+}
+
+/**
+ * Change default quality of img
+ */
+add_filter('jpeg_quality', function($arg){return 96;});

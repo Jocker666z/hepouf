@@ -68,5 +68,5 @@
 </aside>
 
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?><?php endif; ?>
-<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Propos&eacute; votre lien">Propos&eacute; votre lien</a></div>
+<div class="sidebar-bottom-link"><a href="/contact/" title="Propos&eacute; votre lien">Propos&eacute; votre lien</a></div>
 <!-- #widget-area-2 --></div>
