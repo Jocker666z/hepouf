@@ -70,7 +70,7 @@ body {
 	background: rgb(224,224,224);
 	color: #333;
 	font-weight: 400;
-	font-family: "Open Sans",Helvetica,Arial;
+	font-family: Open Sans,Helvetica,Arial;
 	line-height: 1.5em;
 	margin: 0;
   	font-size: 0.95em;
@@ -590,7 +590,7 @@ dd {
 	box-shadow: 0 10px 20px -18px rgb(1,1,1);
 	}
 #main-navigation {
-	width: 960px;
+	width: 968px;
 	margin: 0 auto;
 	}
 .site-main {
@@ -1156,7 +1156,7 @@ a.comment_quote_link:hover,
 	color: rgb(75,75,75);
 	line-height: 12px;
 	font-style: italic;
-	padding: 0 0 0 15px;
+	padding: 1px 0 0 15px;
 	font-size: .875em;
 	}
 .comment-list li.comment .comment-count {
@@ -1538,6 +1538,9 @@ ul.recentcomments-block {
 	white-space: nowrap;
 	overflow: hidden;
 	z-index: 4;
+	}
+li.recentcomments {
+    line-height: 34px;
 	}
 .recentcomments-firstline {
 	}
