@@ -191,3 +191,14 @@ function athemes_categorized_blog() {
 		return false;
 	}
 }
+
+/**
+ * Remove wordpress version visible in source
+ */
+function remove_version_generator() { return '';}
+add_filter('the_generator', 'remove_version_generator');
+
+function remove_version_from_style_js( $src ) { if ( strpos( $src, 'ver=' . get_bloginfo( 'version' ) ) ) $src = remove_query_arg( 'ver', $src );
+return $src;}
+add_filter( 'style_loader_src', 'remove_version_from_style_js');
+add_filter( 'script_loader_src', 'remove_version_from_style_js');
