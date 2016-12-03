@@ -159,15 +159,12 @@ add_shortcode( 'osandroid', 'lp_os_support_android' );
 /**
  * Limit size of title
  */
-function shortened_title() {
-$original_title = get_the_title();
-$title = html_entity_decode($original_title, ENT_QUOTES, "");
-$limit = "55";
-$ending="...";
-if(strlen($title) >= ($limit+3)) {
-$title = substr($title, 0, $limit) . $ending; }
-echo $title;
+function max_title_length( $title ) {
+$max = 55;
+if( strlen( $title ) > $max ) { return substr( $title, 0, $max ). " &hellip;";}
+else { return $title; }
 }
+add_filter( 'the_title', 'max_title_length');
 
 /**
  * Move comment field to bottom

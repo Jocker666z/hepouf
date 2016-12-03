@@ -33,6 +33,8 @@
 <?php endif; ?>	
 
 	<?php wp_head(); ?>
+	
+	<link rel="alternate" type="application/rss+xml" title="lePouf &raquo; Flux du Board" href="/category/lp-board/feed/" />
 </head>
 
 <body <?php body_class(); ?>>

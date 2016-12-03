@@ -34,6 +34,7 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 	07.1			Content: Stantard
 	07.1.1			Content: Stantard - footer
 	07.2			Content: Video
+	07.3			Content: Le Board
 	08	Media Elements
 	08.1			Media Elements: Caption
 	08.2			Media Elements: IMG
@@ -870,6 +871,25 @@ a.wp_rp_thumbnail img {
 	margin: 0 -8.8em 1.8em 2em;
 	}
 
+/*	07.3	Content: Le Board
+----------------------------------------------- */
+.category-1106 .container {
+    width: 700px;
+    padding: 30px 50px 30px 50px;
+	}
+.category-1106 .content-area {
+	width: 100%;
+	}
+.category-1106 .content-area .site-content {
+    width: auto;
+	}
+
+.board-content
+
+#comment-board {
+	display:none;
+}
+
 /*--------------------------------------------- */
 /*	08	Media Elements
 ----------------------------------------------- */
@@ -956,7 +976,7 @@ img {
 embed,
 iframe,
 object {
-	width: 100%;
+  	width: 100%;
 	}
 .comment-content p iframe {
     	margin: 0 auto;	
@@ -965,7 +985,6 @@ object {
 .comment-content iframe {
 	width: 80%;
 	}
-
 /*--------------------------------------------- */
 /*	09	Navigation
 ----------------------------------------------- */
@@ -1125,6 +1144,13 @@ a.comment_quote_link:hover,
 	padding-right: 10px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	}
+.comment-form p {
+    	margin: 5px 0;
+	}
+.comment-form p.form-submit {
+    	margin-top: 10px;
+	clear: both;
+	}
 
 /*	end reply button
 ----------------------------------------------- */
@@ -1205,9 +1231,6 @@ a.comment_quote_link:hover,
 	padding: 0;
 	}
 #commentform label {
-	font-size: 1.3em;
-	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-	letter-spacing: 2px;
 	text-align: left;
 	margin-left: 5px;
 	}
@@ -1222,7 +1245,7 @@ p.comment-form-author {
 	}
 .form-allowed-tags {
     	float: right;
-   	width: 60%;
+   	width: 55%;
     	padding-left: 8px;
     	border-left: 5px solid #d6d6d6;
 	}

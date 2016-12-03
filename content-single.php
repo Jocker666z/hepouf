@@ -90,7 +90,7 @@
 <?php endif;?>
 
 	<div class="head-content-title">
-	<h2 class="entry-title"><?php shortened_title(); ?></h2>
+	<h2 class="entry-title"><?php the_title(); ?></h2>
 
 	<div class="entry-content-meta">
 		<div class="entry-meta">

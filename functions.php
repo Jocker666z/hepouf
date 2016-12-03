@@ -26,7 +26,7 @@ function hepouf_setup() {
 	/**
 	 * Add post formats
 	 */
-	add_theme_support( 'post-formats', array( 'video','status' ) );
+	add_theme_support( 'post-formats', array( 'video','status','link' ) );
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
