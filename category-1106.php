@@ -29,48 +29,34 @@ get_header(); ?>
 	<!-- end.page-header -->
 
 	<!-- start.page-content-->
-
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 		<div class="board-content">
 
-			<div class="list-block-thumb">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail( 'thumbnail' ); ?></a>
-			</div>	
-
-			<div class="list-block-title">				
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			
+			<div class="board-block-title">				
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>		
 				<div class="entry-meta">
-					<i class="ico-user"></i><?php the_author_posts_link(); ?>
-					<span class="cat-links">
-					<i class="ico-calendar"></i><?php the_time('d/m/Y\, G\:i'); ?> 
-					</span>
-					<span class="comments-link"><i class="ico-comment"></i>	
-						<?php echo sprintf(__('<a href="%s">%s Commentaire(s)</a>', 'textdomain'), get_comments_link(),get_comments_number()); ?>
-					</span>
+                    Proposé par <i><?php the_author_posts_link(); ?> </i> le <?php the_time(' d/m/Y\ '); ?>
 				</div>
-
-				<div class="entry-meta">
-					<?php if ( 'post' == get_post_type() ) : ?>
-						<?php
-							$categories_list = get_the_category_list( __( ', ', 'athemes' ) );
-							if ( $categories_list && athemes_categorized_blog() ) :
-						?>
-						<span class="cat-links">
-							<?php printf( __( '<i class="ico-folder"></i>%1$s', 'athemes' ), $categories_list ); ?>
-						</span>
-						<?php endif; ?>
-					<?php endif; ?>
-				</div>
-            </div>	
+            </div>
+            
 			<?php the_content( __( 'athemes' ) ); ?>
+            
+<div class="share-links">
+		<span class="share-links-ico">
+                <a style="margin-right:7px" target="_blank" title="Envoyer par mail" href="mailto:?subject=<?php the_title_attribute(); ?>&body=<?php the_permalink(); ?>" rel="nofollow"><i class="ico-mail"></i></a>
+                <a target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=260,width=700');return false;"><i class="ico-twitter"></i></a>
+                <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title_attribute(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><i class="ico-facebook"></i></a> 				
+                <a target="_blank" title="Google +" href="https://plus.google.com/share?url=<?php the_permalink(); ?>&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><i class="ico-gplus"></i></a>
+                <a target="_blank" title="Reddit" href="http://reddit.com/submit?url=<?php the_permalink(); ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=750,width=550');return false;"><i class="ico-reddit"></i></a>
+</span>
 
-		<div id='comment-board'><?php $withcomments = "1"; comments_template(); // Get wp-comments.php template ?></div>
-			<input type='button' id='hideshow' value='hide/show'>
-		</div>
-
+<span class="board-comments-link">
+	<i class="ico-comment"></i><?php echo sprintf(__('<a href="%s">%s Commentaire(s)</a>', 'textdomain'), get_comments_link(),get_comments_number()); ?>
+<span>
+            </div>  
+            
         <!-- end.page-content-->
 
 		<?php endwhile; ?>
@@ -81,16 +67,5 @@ get_header(); ?>
 
 		</div>
 	</section>
-
-
+        
 <?php get_footer(); ?>
-
-<script type="text/javascript">
-<!--
-jQuery(document).ready(function(){
-        jQuery('#hideshow').on('click', function(event) {        
-             jQuery('#comment-board').toggle('show');
-        });
-    });
-//-->
-</script>

@@ -44,7 +44,7 @@
 	endwhile;
 	?>
 </div>
-<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Voir les cat&eacute;gories misent en avant">Retrouver les choses misent en avant</a></div>
+<div class="sidebar-bottom-link"><a href="/category/lepouf/" title="Voir les cat&eacute;gories mises en avant">Retrouver les choses mises en avant</a></div>
 
 <aside class="widget">
 <h3 class="widget-title"><span>&Agrave; l'&eacute;coute</span></h3>
@@ -68,5 +68,5 @@
 </aside>
 
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?><?php endif; ?>
-<div class="sidebar-bottom-link"><a href="/contact/" title="Propos&eacute; votre lien">Propos&eacute; votre lien</a></div>
+<div class="sidebar-bottom-link"><a href="/contact/" title="Proposer votre lien">Proposer votre lien</a></div>
 <!-- #widget-area-2 --></div>

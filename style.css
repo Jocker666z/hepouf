@@ -781,6 +781,7 @@ dd {
 .head-content-tumbnail img {
 	border: 2px solid rgb(225,225,225);
 	}
+
 /*	07.1.1	Content: Stantard - footer
 ----------------------------------------------- */
 .last-edit {
@@ -873,6 +874,15 @@ a.wp_rp_thumbnail img {
 
 /*	07.3	Content: Le Board
 ----------------------------------------------- */
+.board-block-title {
+	white-space: nowrap;
+	}
+.board-block-title .entry-title {
+	font-size: 2em;
+	}
+.board-block-title .entry-meta a {
+	color: #444;
+	}
 .category-1106 .container {
     width: 700px;
     padding: 30px 50px 30px 50px;
@@ -883,13 +893,27 @@ a.wp_rp_thumbnail img {
 .category-1106 .content-area .site-content {
     width: auto;
 	}
-
-.board-content
-
-#comment-board {
-	display:none;
-}
-
+.category-1106 p {
+	margin: 5px 0 15px 0;
+	}
+.category-1106 .share-links {
+	text-align: left;
+	padding: 7px 10%;
+	margin-bottom: 30px;
+	}
+.category-1106 .share-links a {
+	font-size: 17px;
+    	margin: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	}
+.category-1106 .share-links-ico {
+	}
+.category-1106 .share-links .board-comments-link {
+	float: right;
+	}
+.category-1106 .share-links .board-comments-link a:hover {
+	top: 0;
+	}
 /*--------------------------------------------- */
 /*	08	Media Elements
 ----------------------------------------------- */

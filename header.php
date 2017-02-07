@@ -6,8 +6,7 @@
  *
  * @package aThemes
  */
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<title><?php wp_title( '-', true, 'right' ); ?></title>
@@ -31,10 +30,11 @@
 <?php if ( get_theme_mod('apple_touch_57') ) : ?>
 	<link rel="apple-touch-icon" href="<?php echo esc_url(get_theme_mod('apple_touch_57')); ?>" />
 <?php endif; ?>	
+    
+    <?php wp_head(); ?>
+    
+    <link rel="alternate" type="application/rss+xml" title="lePouf &raquo; Flux du Board" href="/category/lp-board/feed/" />
 
-	<?php wp_head(); ?>
-	
-	<link rel="alternate" type="application/rss+xml" title="lePouf &raquo; Flux du Board" href="/category/lp-board/feed/" />
 </head>
 
 <body <?php body_class(); ?>>
