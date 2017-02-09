@@ -18,7 +18,6 @@ get_header();
 
 
 <div id="content" class="site-content-bottom" role="main">
-<div class="last-edit">Dernière modification : <?php the_modified_author(); ?> le <?php the_modified_date('d/m/Y\ à G\hi'); ?></div>
 <footer>
 <div class="entry-meta entry-footer">
 </div>
@@ -59,7 +58,6 @@ get_header();
 			<?php get_template_part( 'content', 'single' ); ?></div>
 
 	<div id="content" class="site-content" role="main">
-<div class="last-edit">Dernière modification : <?php the_modified_author(); ?> le <?php the_modified_date('d/m/Y\ à G\hi'); ?></div>
 <footer>
 <div class="entry-meta entry-footer">
 </div>

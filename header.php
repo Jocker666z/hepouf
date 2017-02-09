@@ -32,9 +32,6 @@
 <?php endif; ?>	
     
     <?php wp_head(); ?>
-    
-    <link rel="alternate" type="application/rss+xml" title="lePouf &raquo; Flux du Board" href="/category/lp-board/feed/" />
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -47,7 +44,7 @@
 				<?php wp_nav_menu( array( 'container_class' => 'clearfix sf-menu', 'theme_location' => 'main' ) ); ?>
 			</nav>
 			</div>
-	<!-- #masthead --></header>
+	</header>
 
 <div id="main" class="site-main">
 		<div class="clearfix container">

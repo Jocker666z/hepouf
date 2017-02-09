@@ -202,14 +202,3 @@ function remove_version_from_style_js( $src ) { if ( strpos( $src, 'ver=' . get_
 return $src;}
 add_filter( 'style_loader_src', 'remove_version_from_style_js');
 add_filter( 'script_loader_src', 'remove_version_from_style_js');
-
-/**
- * Exclude categories (by id) from home & RSS feed
- */
-function excludeCategory($query) {
-	if ($query->is_feed || $query->is_home) {
-   	$query->set('cat','-1106');
-	}
-return $query;
-}
-add_filter('pre_get_posts','excludeCategory');
