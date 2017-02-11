@@ -64,10 +64,8 @@ function hepouf_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-			<footer class="clearfix comment-meta">
+			<div class="clearfix comment-meta">
                         
-				<div class="reply-bar"></div>
-            
 				<div class="clearfix comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
 
@@ -77,7 +75,7 @@ function hepouf_comment( $comment, $args, $depth ) {
 						</a>
 					</div><!-- .comment-metadata -->
 
-					<?php printf( __( '%s', 'athemes' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s', 'athemes' ), sprintf( '<span class="fn">%s</span>', get_comment_author_link() ) ); ?>
 
 					<span class="comment-level">
 						<?php
@@ -98,7 +96,7 @@ function hepouf_comment( $comment, $args, $depth ) {
 				<?php if ( '0' == $comment->comment_approved ) : ?>
 				<p class="comment-awaiting-moderation"><?php _e( 'Votre commentaire est en attente de mod&eacute;ration.', 'athemes' ); ?></p>
 				<?php endif; ?>
-			</footer><!-- .comment-meta -->
+			</div><!-- .comment-meta -->
 
 			<div class="comment-content">
 				<?php comment_text(); ?>

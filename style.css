@@ -14,7 +14,7 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 ----------------------------------------------- */
 /*	01	Global
 	02	Text Elements
-	02.1			Title, list & Paragraph
+	02.1			Various, title, list & Paragraph
 	02.2			Links
 	02.3			pre & code
 	02.4			blockquote
@@ -66,6 +66,11 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
     font-family: 'Yanone Kaffeesatz Thin';
     src: local('fonts/Yanone Kaffeesatz Thin'), url('fonts/YanoneKaffeesatz-Thin.woff') format('woff');
 }
+html {
+    font-size: 100%;
+          -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
+    }
 body {
 	background: rgb(224,224,224);
 	color: #333;
@@ -78,13 +83,30 @@ body {
 /*--------------------------------------------- */
 /*	02	Text Elements
 ----------------------------------------------- */
-/*	02.1	Text Elements: Title, list & Paragraph
+/*	02.1	Text Elements: Various, title, list & Paragraph
 ----------------------------------------------- */
+strong {
+    font-weight: bold;
+    }
+small {
+    font-size: 85%;
+    }
+em {
+    font-style: italic;
+    }
 p {
 	margin: 0 0 30px 0;
 	text-align: justify;
 	line-height: 1.65em;
 	}
+li {
+    line-height: 20px;
+    }
+ul,
+ol {
+    padding: 0;
+    margin: 0 0 25px 25px;
+    }
 p + ol,
 p + ul {
 	text-align: justify;
@@ -96,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
 	line-height: 1.2em;
+    text-rendering: optimizelegibility;
 	}
 h1 {
 	font-size: 16px;
@@ -121,11 +144,18 @@ h6 {
 	font-size: 10px;
 	font-size: 1rem;
 	}
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #ffffff;
+    }
 
 /*	02.2	Text Elements: Links
 ----------------------------------------------- */
 a {						
 	color: rgb(250, 52, 52);
+    text-decoration: none;
 	outline: none;
             -webkit-transition: all 0.14s ease 0s; 
             -moz-transition: all 0.14s ease 0s; 
@@ -138,6 +168,7 @@ a:hover,
 a:focus,
 a:active {
 	color: #333;
+    text-decoration: underline;
 	}
 
 /*	02.3	Text Elements: pre & code
@@ -179,6 +210,9 @@ blockquote p {
 	margin: 0 0 15px 15px;
 	padding-right: 10px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	}
+.comment-content blockquote {
+  	margin: 0 0 20px 0;
 	}
 blockquote cite {
 	float: left;
@@ -624,7 +658,18 @@ dd {
 	display: block;
 	padding: 0 0 0 20px;
 	}
-
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+    }
 /*--------------------------------------------- */
 /*	05	Home
 ----------------------------------------------- */
@@ -899,8 +944,13 @@ a.wp_rp_thumbnail img {
 /*	08.2	Media Elements: IMG
 ----------------------------------------------- */
 img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 	border-radius: 2px 2px 2px 2px;
 	box-shadow: 2px -2px 20px 3px rgba(190,190,190,0.4);
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality;
 	}
 .alignleft {
 	display: inline;
@@ -1081,15 +1131,22 @@ object {
 	}
 .comment-list li.comment .comment-body {
 	padding: 30px 0 0px;
-	border-bottom: 1px solid #d6d6d6;
 	}
 .logged-in-as,
 .logged-in-as + .comment-form-comment label {
     display: none;
+    }
+.comment-respond {
+    margin-left: 30px;
 }
 
 /*	reply button
 ----------------------------------------------- */
+.comment-content div + p {
+        margin: 0;
+    }
+a.comment_quote_link {
+    }
 a.comment_quote_link,
 .comment-list li.comment .reply {
 	float: right;
@@ -1107,6 +1164,7 @@ a.comment_quote_link,
 .comment-list li.comment .reply a {
     position: relative;
     top: -23px;
+    right: 65px;
 	}
 a.comment_quote_link:hover,
 .comment-list li.comment .reply a:hover {
@@ -1124,7 +1182,7 @@ a.comment_quote_link:hover,
 ----------------------------------------------- */
 .comment-list li.comment .comment-author .avatar {
 	float: left;
-	margin: 0 20px 0 0;
+	margin: 0 13px 0 0;
 	display: block;
 	border: 1px solid #d6d6d6;
 	border-radius: 50%;
@@ -1160,7 +1218,7 @@ a.comment_quote_link:hover,
 	}
 .comment-list li.comment .comment-metadata {
 	color: #999;
-	margin: 0 0 2px;
+	margin: 4px 0 2px;
 	font-size: .875em;
 	}
 .comment-list li.comment .comment-metadata a {
@@ -1171,8 +1229,11 @@ a.comment_quote_link:hover,
 	color: #333;
 	}
 .comment-content {
-	clear: both;
-	margin: 20px 0 0;
+    clear: both;
+    padding: 20px 0 0 45px;
+    border-left: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    margin-left: 30px;
 	}
 .comment-content a {
 	word-wrap: break-word;
@@ -1213,9 +1274,8 @@ p.comment-form-author {
 	}
 .form-allowed-tags {
     float: right;
-   	width: 55%;
     padding-left: 8px;
-    border-left: 5px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
 	}
 .form-allowed-tags code {
     font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;

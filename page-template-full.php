@@ -4,7 +4,7 @@
  *
  * This is the template that displays full width pages.
  * 
- * @package aThemes
+ * @package hepouf
 */
 
 get_header(); ?>

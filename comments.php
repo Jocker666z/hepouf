@@ -53,6 +53,6 @@ if ( post_password_required() )
 
 
 	<?php comment_form( array( 'comment_notes_after' => '<div class="form-allowed-tags">' . sprintf( __( 'Vous pouvez utiliser les 
-<a title="Aide pour les balises" href="/a-propos/aides/#aide-balises" >balises</a> de mise en forme : %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</div>' ) ); ?>
+<a title="Aide pour les balises" href="/a-propos/aides/#aide-balises" target="_blank" >balises</a> de mise en forme' ), '' ) . '</div>' ) ); ?>
 
 </div><!-- #comments -->

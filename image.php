@@ -2,7 +2,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package aThemes
+ * @package hepouf
  */
 
 get_header();

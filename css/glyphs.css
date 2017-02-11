@@ -29,13 +29,13 @@
 .ico-rss:before           { content: '\f09e'; }
 .entry-meta .ico-calendar { margin-right: 3px; }
 .ico-calendar:before 	  { content: '\f073'; }
-.ico-search:before 	  { content: '\f002'; }
+.ico-search:before        { content: '\f002'; }
 .entry-meta .ico-user     { margin-right: 3px; }
 .ico-user:before          { content: '\f007'; }
 .ico-mail:before          { content: '\f0e0'; }
 .ico-links:before         { content: '\f0c1'; }
 .entry-meta .ico-folder   { margin-right: 3px; }
-.ico-folder:before 	  { content: '\f07c'; }
+.ico-folder:before 	      { content: '\f07c'; }
 .ico-comment:before 	  { content: '\f0e6'; }
 
 /* 'SHORTCODE SUPPORT OS ICO' */

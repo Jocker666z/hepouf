@@ -2,7 +2,7 @@
 /**
  * The template for displaying search forms in aThemes
  *
- * @package aThemes
+ * @package hepouf
  */
 ?>
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">

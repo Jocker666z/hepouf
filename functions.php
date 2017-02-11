@@ -50,7 +50,7 @@ function hepouf_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
     register_sidebar( array(
-		'name'          => __( 'Sidebar', 'athemes' ),
+		'name'          => __( 'Bottom Sidebar', 'athemes' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -58,7 +58,7 @@ function hepouf_widgets_init() {
 		'after_title'   => '</span></h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Sub Footer 1', 'athemes' ),
+		'name'          => __( 'Footer 1', 'athemes' ),
 		'id'            => 'sidebar-3',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
@@ -66,7 +66,7 @@ function hepouf_widgets_init() {
 		'after_title'   => '</span></h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Sub Footer 2', 'athemes' ),
+		'name'          => __( 'Footer 2', 'athemes' ),
 		'id'            => 'sidebar-4',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
@@ -74,7 +74,7 @@ function hepouf_widgets_init() {
 		'after_title'   => '</span></h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Sub Footer 3', 'athemes' ),
+		'name'          => __( 'Footer 3', 'athemes' ),
 		'id'            => 'sidebar-5',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
@@ -123,11 +123,10 @@ function hepouf_footer_sidebar_class() {
 function enqueue_scripts() {
 	wp_enqueue_style( 'glyphs', get_template_directory_uri() . '/css/glyphs.css' );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css' );
-	wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css' );
+    wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-
 	wp_enqueue_style( 'responsive' );
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ) );
+
 	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.js', array( 'jquery' ) );
 	wp_enqueue_script( 'supersubs', get_template_directory_uri() . '/js/supersubs.js', array( 'jquery' ) );
 	wp_enqueue_script( 'settings', get_template_directory_uri() . '/js/settings.js', array( 'jquery' ) );
@@ -137,16 +136,6 @@ function enqueue_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
-
-/**
- * Load html5shiv
- */
-function load_html5shiv() {
-    echo '<!--[if lt IE 9]>' . "\n";
-    echo '<script src="' . esc_url( get_template_directory_uri() . '/js/html5shiv.min.js' ) . '"></script>' . "\n";
-    echo '<![endif]-->' . "\n";
-}
-add_action( 'wp_head', 'load_html5shiv' );
 
 /**
  * Custom functions that act independently of the theme templates.

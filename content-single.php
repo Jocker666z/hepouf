@@ -1,6 +1,6 @@
 <?php
 /**
- * @package aThemes
+ * @package hepouf
  */
 ?>
 
