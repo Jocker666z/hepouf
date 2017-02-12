@@ -87,6 +87,7 @@ body {
 ----------------------------------------------- */
 strong {
     font-weight: bold;
+    font-size: 0.98em;
     }
 small {
     font-size: 85%;
@@ -936,6 +937,7 @@ a.wp_rp_thumbnail img {
 	}
 .wp-caption-text a {
 	font-weight: bold;
+	font-size: 0.98em;
 	}
 .aligncenter .wp-caption-text {
 	margin: 0 0 -0.5em 0;
