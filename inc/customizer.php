@@ -10,7 +10,7 @@ function hepouf_customize_register( $wp_customize ) {
 	 */	
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-
+    
 	//___General___//
     $wp_customize->add_section(
         'hepouf_general',
@@ -19,7 +19,7 @@ function hepouf_customize_register( $wp_customize ) {
             'priority' => 9,
         )
     );
-	//Logo Upload
+ 	//Logo Upload
 	$wp_customize->add_setting(
 		'site_logo',
 		array(

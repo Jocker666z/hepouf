@@ -12,6 +12,7 @@
 	<title><?php wp_title( '-', true, 'right' ); ?></title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+    <meta name="description" content="Le site qui t'aime, de l'art, du jeu, et du GNU/Linux" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     

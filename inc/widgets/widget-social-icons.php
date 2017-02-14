@@ -61,11 +61,6 @@ class aThemes_Social_Icons extends WP_Widget {
 				'hepouf_widgets_title'			=> __( 'LinkedIn', 'hepouf' ),
 				'hepouf_widgets_field_type'		=> 'text'
 			),
-			'pinterest' => array (
-				'hepouf_widgets_name'			=> 'pinterest',
-				'hepouf_widgets_title'			=> __( 'Pinterest', 'hepouf' ),
-				'hepouf_widgets_field_type'		=> 'text'
-			),
 			'youtube' => array (
 				'hepouf_widgets_name'			=> 'youtube',
 				'hepouf_widgets_title'			=> __( 'YouTube', 'hepouf' ),
@@ -99,6 +94,11 @@ class aThemes_Social_Icons extends WP_Widget {
             'reddit' => array (
 				'hepouf_widgets_name'			=> 'reddit',
 				'hepouf_widgets_title'			=> __( 'Reddit', 'hepouf' ),
+				'hepouf_widgets_field_type'		=> 'text'
+			),
+             'paypal' => array (
+				'hepouf_widgets_name'			=> 'paypal',
+				'hepouf_widgets_title'			=> __( 'Paypal', 'hepouf' ),
 				'hepouf_widgets_field_type'		=> 'text'
 			),
 		);

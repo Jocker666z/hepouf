@@ -104,12 +104,8 @@ class aThemes_Recent_Comments extends WP_Widget {
                 $output .= sprintf( _x( '%1$s %2$s', 'widgets' ),
 			'<span>' . get_avatar( $comment, $args['avatar_size'] ) . '</span><span class="recentcomments-firstline"><span class="comment-author-link">' . get_comment_author_link() . '</span>',
                     	'<span class="recent-comment-title"><a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></span>' 
-                    
-                    
-                   
-                                     
-				);
-				$output .= '</li>';
+                                  );
+                        $output .= '</li>';
 			}
 		}
 		$output .= '</ul></div>';

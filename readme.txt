@@ -1,6 +1,6 @@
 Hepouf WordPress theme
 Hepouf WordPress theme is licensed under the GNU GPL v3
-Hepouf is a specifically developed for http://lepouf.info/
+Hepouf is a specifically developed for https://lepouf.info/
 
 
 CREDITS
