@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'FontAwesome';
     src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
-    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),        url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),                        url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),                          url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),                        url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	}
@@ -39,10 +39,10 @@
 .ico-comment:before 	  { content: '\f0e6'; }
 
 /* 'SHORTCODE SUPPORT OS ICO' */
-.ico-os-gnu-linux:before        { content: '\f17c'; }
-.ico-os-win:before              { content: '\f17a'; }
-.ico-os-osx:before              { content: '\f179'; }
-.ico-os-android:before          { content: '\f17b'; }
+.ico-os-gnu-linux:before        { content: '\f17c'; text-shadow: 1px 1px 1px rgba(0,0,0,0.2); }
+.ico-os-win:before              { content: '\f17a'; text-shadow: 1px 1px 1px rgba(0,0,0,0.2); }
+.ico-os-osx:before              { content: '\f179'; text-shadow: 1px 1px 1px rgba(0,0,0,0.2); }
+.ico-os-android:before          { content: '\f17b'; text-shadow: 1px 1px 1px rgba(0,0,0,0.2); }
 
 /* 'CAT ICO' */
 .ico-cat-gnu-linux:before       { content: '\f17c'; width: 30px; font-size: 30px; }
@@ -55,10 +55,13 @@
 .ico-cat-lepouf:before          { content: '\f0f4'; width: 30px; font-size: 30px; }
 .ico-cat-musique:before         { content: '\f001'; width: 30px; font-size: 30px; }
 
-/* 'SOCIAL ICO' */
+/* 'SOCIAL ICO' (Widget) */
 .ico-twitter:before 	{ content: '\f099'; }
 .ico-facebook:before 	{ content: '\f09a'; }
 .ico-gplus:before       { content: '\f0d5'; }
 .ico-youtube:before 	{ content: '\f167'; }	
 .ico-reddit:before 	    { content: '\f1a1'; }
 .ico-github:before 	    { content: '\f09b'; }
+
+/* 'MONEY ICO' (Widget) */
+.ico-paypal:before 	    { content: '\f1ed'; }
