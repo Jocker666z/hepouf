@@ -43,6 +43,7 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 	10	Comments
 	10.1			Comments: display
 	10.2			Comments: form
+	10.3			Comments: Subscribe
 	11	List search & cat
 	12	Sidebar
 	13	Footer
@@ -228,7 +229,7 @@ blockquote cite {
 	width: 100%;
 	color: #353535;
 	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
-	font-size: 24px;
+	font-size: 18px;
     font-style: italic;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
 	letter-spacing: 1px;
@@ -1300,6 +1301,27 @@ p.comment-form-author {
 	vertical-align: middle;
 		-moz-middle-with-baseline
 	}
+
+/*	10.3	Comments: Subscribe
+----------------------------------------------- */
+label[for=subscribe_reloaded_email] {
+	display: none;
+	}
+.subscribe-form-button {
+	position: relative;
+	top: -5px;
+	}
+#subscribe-reloaded-list li {
+	list-style-type: none;
+	}
+#subscribe-reloaded-list li label {
+	text-align: left;
+	}
+#subscribe-reloaded-list li label input[type="checkbox"] {
+	position: relative;
+	top: -3px;
+	}
+
 /*--------------------------------------------- */
 /*	11	List search & cat
 ----------------------------------------------- */
