@@ -205,3 +205,32 @@ function smart_code_escape_content( $content ) {
  * Change default quality of img
  */
 add_filter('jpeg_quality', function($arg){return 96;});
+
+/**
+ * List of 20 recently updated posts, shortcode : [last-updated-posts]
+ */
+function lastupdated_posts() { 
+    $lastupdated_args = array(
+    'orderby' => 'modified',
+    'ignore_sticky_posts' => '1',
+    'posts_per_page' => -1
+    );
+
+    $lastupdated_loop = new WP_Query( $lastupdated_args );
+    $counter = 1;
+    $string .= '<ul>';
+        while( $lastupdated_loop->have_posts() && $counter < 20 ) : $lastupdated_loop->the_post();
+        $string .= '<li><a href="' . get_permalink( $lastupdated_loop->post->ID ) . '"> ' .get_the_title( $lastupdated_loop->post->ID ) . '</a> ('. get_the_modified_date() .') </li>';
+        $counter++;
+        endwhile; 
+        $string .= '</ul>';
+        return $string;
+    wp_reset_postdata(); 
+} 
+add_shortcode('last-updated-posts', 'lastupdated_posts');
+
+/**
+ * Hide wordpress version
+ */
+function remove_version_generator() { return '';}
+add_filter('the_generator', 'remove_version_generator');

@@ -439,6 +439,14 @@ time {
 dd {
 	margin-bottom: 1em;
 	}
+.post-20256 ul {  			/* specific style for changelog page */	
+	background-color: rgba(240, 240, 240, 0.9);
+	border-top: 1px dashed #d6d6d6;
+	border-bottom: 1px dashed #d6d6d6;
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+	margin: -10px 0px 30px 0px;
+	padding: 20px 0;
+	}
 
 /*	02.10	Text Elements: Screen readers
 ----------------------------------------------- */
@@ -826,7 +834,7 @@ section {
 	left: -50px;
 	z-index: 3;
 	margin: 0 -30px 0 -10px;
-	box-shadow: -5px 0px 10px 0px rgba(190,190,190,0.7);
+	box-shadow: -2px -2px 11px 0px rgba(190,190,190,0.6);
 	}
 .page .head-content-tumbnail {
 	top: -40px;
@@ -955,13 +963,18 @@ a.wp_rp_thumbnail img {
 /*	08.2	Media Elements: IMG
 ----------------------------------------------- */
 img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
+    	height: auto;
+    	max-width: 100%;
+    	vertical-align: middle;
 	border-radius: 2px 2px 2px 2px;
-	box-shadow: 2px -2px 20px 3px rgba(190,190,190,0.4);
-    -ms-interpolation-mode: bicubic;
-    image-rendering: optimizeQuality;
+    	-ms-interpolation-mode: bicubic;
+    	image-rendering: optimizeQuality;
+	}
+.format-link .entry-content img,
+.format-video .entry-content img,
+.format-status .entry-content img,
+.format-standard .entry-content img {
+	box-shadow: none;
 	}
 .alignleft {
 	display: inline;
@@ -1005,6 +1018,9 @@ img {
 	}
 .entry-attachment .attachment {
 	margin: 0 0 15px;
+	}
+.gallery .wp-caption-text {
+    	margin: 0 12px 0 0;
 	}
 
 /*	08.4	Media Elements: Embed
@@ -1197,7 +1213,7 @@ a.comment_quote_link:hover,
 	display: block;
 	border: 1px solid #d6d6d6;
 	border-radius: 50%;
-	box-shadow: 0 5px 10px 1px rgba(190,190,190,1);
+	box-shadow: 0 5px 10px 1px rgba(190,190,190,0.7);
 	}
 .comment-list li.comment .comment-author .fn {
 	float: left;
