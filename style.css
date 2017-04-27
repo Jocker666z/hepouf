@@ -18,7 +18,7 @@ Tags: black, white, red, two-columns, fixed-width, threaded-comments, full-width
 	02.2			Links
 	02.3			pre & code
 	02.4			blockquote
-	02.5			List numbers in bold
+	02.5			List
 	02.6			Table
 	02.7			Form
 	02.8			Clearing
@@ -84,7 +84,7 @@ body {
 /*--------------------------------------------- */
 /*	02	Text Elements
 ----------------------------------------------- */
-/*	02.1	Text Elements: Various, title, list & Paragraph
+/*	02.1	Text Elements: Various, title, & Paragraph
 ----------------------------------------------- */
 strong {
     font-weight: bold;
@@ -101,19 +101,6 @@ p {
 	text-align: justify;
 	line-height: 1.65em;
 	}
-li {
-    line-height: 20px;
-    }
-ul,
-ol {
-    padding: 0;
-    margin: 0 0 25px 25px;
-    }
-p + ol,
-p + ul {
-	text-align: justify;
-	margin: -5px 0px 30px 25px;
-    }
 h1, h2, h3, h4, h5, h6 {
 	margin: 1em 0 1.25em;
 	color: #222;
@@ -230,7 +217,7 @@ blockquote cite {
 	color: #353535;
 	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
 	font-size: 18px;
-    font-style: italic;
+	font-style: italic;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
 	letter-spacing: 1px;
 	margin: 10px 0 10px -15px;
@@ -244,8 +231,21 @@ blockquote cite:after {
 	content: "\2009 \223C";
 	}
 
-/*	02.5	Text Elements: List number in bold
+/*	02.5	Text Elements: List
 ----------------------------------------------- */
+li {
+    line-height: 20px;
+    }
+ul,
+ol {
+    padding: 0;
+    margin: 0 0 25px 25px;
+    }
+p + ol,
+p + ul {
+	text-align: justify;
+	margin: -5px 0px 30px 25px;
+    }
 .entry-content ol {
 	margin-right: 1.5em;
   	counter-reset:item;
@@ -275,7 +275,15 @@ blockquote cite:after {
   	content: counter(item) ".";
 	}
 .entry-content ul li {
-	margin-left: 2em;
+	margin: .4em 0 .4em 2em;
+	}
+.post-20256 ul {  			/* specific style for changelog page */	
+	background-color: rgba(240, 240, 240, 0.9);
+	border-top: 1px dashed #d6d6d6;
+	border-bottom: 1px dashed #d6d6d6;
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+	margin: -10px 0px 30px 0px;
+	padding: 20px 0;
 	}
 
 /*	02.6	Text Elements: Table
@@ -439,14 +447,9 @@ time {
 dd {
 	margin-bottom: 1em;
 	}
-.post-20256 ul {  			/* specific style for changelog page */	
-	background-color: rgba(240, 240, 240, 0.9);
-	border-top: 1px dashed #d6d6d6;
-	border-bottom: 1px dashed #d6d6d6;
-	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
-	margin: -10px 0px 30px 0px;
-	padding: 20px 0;
-	}
+.widget_meta ul li:last-child {
+	display: none;
+}
 
 /*	02.10	Text Elements: Screen readers
 ----------------------------------------------- */
@@ -1022,6 +1025,9 @@ img {
 .gallery .wp-caption-text {
     	margin: 0 12px 0 0;
 	}
+.gallery.gallery-columns-3 .wp-caption-text { 	/* Fix caption for 3 column gal. */
+    	margin: 0 3px 0 0;
+	}
 
 /*	08.4	Media Elements: Embed
 ----------------------------------------------- */
@@ -1341,6 +1347,20 @@ label[for=subscribe_reloaded_email] {
 /*--------------------------------------------- */
 /*	11	List search & cat
 ----------------------------------------------- */
+.result-count {
+	text-decoration: underline;
+	font-weight: initial;
+	}
+.search-form label {
+	display: block;
+	height: 35px;
+	text-align: center;
+	}
+.search-form #cat {
+	display: block;
+	height: 27px;
+	margin: 0 auto;
+	}
 .list-block {
 	position: relative;
 	left:-1px;

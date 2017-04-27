@@ -13,10 +13,16 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Les r&eacute;sultats pour : %s', 'athemes' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+<h1 class="page-title"><?php $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); echo $count . ' '; wp_reset_query(); ?> r&eacute;sultats pour : <span class="result-count"><?php echo get_search_query() ?></span></h1>
 			<!-- .page-header --></header>
 
-			<?php get_search_form(); ?>
+
+<form role="search" method="get" class="search-form" action="<?php echo home_url(); ?>">
+	<label>
+		<input class="search-field" placeholder="Rechercher …" value="<?php echo get_search_query() ?>" name="s" title="Recherche" type="search">
+	</label>
+    <?php wp_dropdown_categories( 'show_option_none=Catégorie pour la recherche&show_count=1&orderby=title&order=ASC&hierarchical=1' ); ?>
+</form>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
