@@ -26,7 +26,7 @@
 .ico-tags:before          { content: '\f02c'; }
 .ico-left-open:before 	  { content: '\f137'; }
 .ico-right-open:before	  { content: '\f138'; }
-.ico-rss:before           { content: '\f09e'; }
+.ico-feed:before           { content: '\f09e'; }
 .entry-meta .ico-calendar { margin-right: 3px; }
 .ico-calendar:before 	  { content: '\f073'; }
 .ico-search:before        { content: '\f002'; }
@@ -56,8 +56,8 @@
 .ico-cat-musique:before         { content: '\f001'; width: 30px; font-size: 30px; }
 
 /* 'SOCIAL ICO' (Widget) */
-.ico-twitter:before 	{ content: '\f099'; }
-.ico-facebook:before 	{ content: '\f09a'; }
+.ico-twittor:before 	{ content: '\f099'; }
+.ico-fessebook:before 	{ content: '\f09a'; }
 .ico-gplus:before       { content: '\f0d5'; }
 .ico-youtube:before 	{ content: '\f167'; }	
 .ico-reddit:before 	    { content: '\f1a1'; }

@@ -36,8 +36,8 @@ class aThemes_Social_Icons extends WP_Widget {
 			),
 			
 			// Other fields
-			'rss' => array (
-				'hepouf_widgets_name'			=> 'rss',
+			'feed' => array (
+				'hepouf_widgets_name'			=> 'feed',
 				'hepouf_widgets_title'			=> __( 'RSS', 'hepouf' ),
 				'hepouf_widgets_field_type'		=> 'text'
 			),
@@ -46,14 +46,14 @@ class aThemes_Social_Icons extends WP_Widget {
 				'hepouf_widgets_title'			=> __( 'Github', 'hepouf' ),
 				'hepouf_widgets_field_type'		=> 'text'
 			),
-			'twitter' => array (
-				'hepouf_widgets_name'			=> 'twitter',
-				'hepouf_widgets_title'			=> __( 'Twitter', 'hepouf' ),
+			'twittor' => array (
+				'hepouf_widgets_name'			=> 'twittor',
+				'hepouf_widgets_title'			=> __( 'Twittor', 'hepouf' ),
 				'hepouf_widgets_field_type'		=> 'text'
 			),
-			'facebook' => array (
-				'hepouf_widgets_name'			=> 'facebook',
-				'hepouf_widgets_title'			=> __( 'Facebook', 'hepouf' ),
+			'fessebook' => array (
+				'hepouf_widgets_name'			=> 'fessebook',
+				'hepouf_widgets_title'			=> __( 'Fessebook', 'hepouf' ),
 				'hepouf_widgets_field_type'		=> 'text'
 			),
 			'linkedin' => array (

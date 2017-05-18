@@ -18,7 +18,7 @@ get_header(); ?>
 							{
 							  $category = get_category( get_query_var('cat') );
 							  if ( ! empty( $category ) )
-							    echo '<span><a href="' . get_category_feed_link( $category->cat_ID ) . '" title="' . sprintf( __( 'Suivre le fil de la catégorie : %1$s', 'appthemes' ), $category->name ) . '" rel="nofollow"><i class="ico-rss"></i></a></span>';
+							    echo '<span><a href="' . get_category_feed_link( $category->cat_ID ) . '" title="' . sprintf( __( 'Suivre le fil de la catégorie : %1$s', 'appthemes' ), $category->name ) . '" rel="nofollow"><i class="ico-feed"></i></a></span>';
 							}
 							
 						elseif ( is_tag() ) :
@@ -28,7 +28,7 @@ get_header(); ?>
 							$rss_link        = get_tag_feed_link($theID);
 							$rss_description = 'Suivre le fil du tag : ' .single_tag_title("", false);
 							if ( ! empty( $theID ) )
-							    echo '<span><a href="' . $rss_link . '" title="' . $rss_description . '" rel="nofollow"><i class="ico-rss"></i></a></span>';
+							    echo '<span><a href="' . $rss_link . '" title="' . $rss_description . '" rel="nofollow"><i class="ico-feed"></i></a></span>';
 							}
 							
 						elseif ( is_author() ) :
@@ -38,7 +38,7 @@ get_header(); ?>
 							$rss_link        = get_author_feed_link($author->ID);
 							$rss_description = 'Suivre le fil de ' . $author->nickname;
 							if ( ! empty( $author ) )
-							echo '' . $author_title . '<span><a href="' . $rss_link . '" title="' . $rss_description . '" rel="nofollow"><i class="ico-rss"></i></a></span>';
+							echo '' . $author_title . '<span><a href="' . $rss_link . '" title="' . $rss_description . '" rel="nofollow"><i class="ico-feed"></i></a></span>';
 							}
 							rewind_posts();
 

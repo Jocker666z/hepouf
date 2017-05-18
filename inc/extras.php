@@ -211,3 +211,13 @@ add_filter('jpeg_quality', function($arg){return 96;});
  */
 function remove_version_generator() { return '';}
 add_filter('the_generator', 'remove_version_generator');
+
+
+/**
+ * Custom comment-notes
+ */
+function custom_comment_notes( $arg ) {
+  $arg['comment_notes_before'] = "<p>Votre adresse de messagerie ne sera jamais publiée, ou utilisée à des fins commerciales. Les champs obligatoires sont indiqués avec des <b>*</b>.</p>";
+  return $arg;
+}
+add_filter( 'comment_form_defaults', 'custom_comment_notes' );

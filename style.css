@@ -422,26 +422,26 @@ time {
 
 /*	02.9	Text Elements: Fixes
 ----------------------------------------------- */
-.ffs-sep { 				/* Clear Fruitful Bar */	
+.ffs-sep {                          /* Clear Fruitful Bar */	
 	clear: both;
 	}
-.ffs-bs div.alert-success {		/* Fruitful info-box */	
+.ffs-bs div.alert-success {         /* Fruitful info-box */	
 	background-color: rgba(240, 240, 240, 0.9);
 	border: 1px dashed #d6d6d6;
     color: black;
 	margin : 0 auto;
 	width: 95%;
 }
-.ffs-bs .close {  			/* Fruitful info-box */	
+.ffs-bs .close {                    /* Fruitful info-box */	
 	display: none;
 	}
-.ffs-bs div.alert-dismissible {		/* Fruitful info-box */	
+.ffs-bs div.alert-dismissible {     /* Fruitful info-box */	
 	padding-right: 15px;
 	}
-.ffs-bs div a {  			/* Fruitful info-box */	
+.ffs-bs div a {  			        /* Fruitful info-box */	
 	color: rgb(250, 52, 52);
 	}
-.ffs-bs div a:hover {  			/* Fruitful info-box */	
+.ffs-bs div a:hover {  			    /* Fruitful info-box */	
 	color: #333;
 	}
 dd {
@@ -849,20 +849,20 @@ section {
 
 /*	07.1.1	Content: Stantard - footer
 ----------------------------------------------- */
-.share-links {
+.charelinks {
 	background: #f6f6f6;
 	border-bottom: 3px solid #C0C0C0;
 	text-align: center;
 	padding: 8px 0 7px 0;
 	}
-.share-links a {
+.charelinks a {
 	position: relative;
 	color: black;
 	top: 0;
 	font-size: 20px;
 	margin: 0 5px;
 	}
-.share-links a:hover {
+.charelinks a:hover {
 	top: -2px;
 	transition: all 0.2s linear;
 	color: rgb(250, 52, 52);
@@ -871,7 +871,7 @@ body.search .page .entry-footer {
 	padding: 0;
 	border-top: none;
 	}
-.share-post h3 {
+.charepost h3 {
 	width: 80%;
 	margin: 25px auto 10px auto;
 	font-size: 1.50em;
@@ -879,7 +879,7 @@ body.search .page .entry-footer {
 	letter-spacing: 1px;
 	border-bottom: 1px solid #D6D6D6;
 	}
-.share-post {
+.charepost {
 	padding: 5px 0 25px 0;
 	margin: 0 auto 25px auto;
 	max-width: 700px;
@@ -888,7 +888,7 @@ body.search .page .entry-footer {
 	overflow: hidden;
 	margin: 0 auto 20px auto;
 	}
-.share-post ul {
+.charepost ul {
 	max-width: 580px;
 	list-style-type: none;
 	}
@@ -906,11 +906,11 @@ a.wp_rp_thumbnail img {
 	display: block;
 	font-style: italic;
 	}
-.share-post a {
+.charepost a {
 	color: black;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 	}
-.share-post a:hover {
+.charepost a:hover {
 	color: rgb(250, 52, 52);
 	}
 
@@ -988,9 +988,6 @@ img {
 	display: inline;
 	float: right;
 	margin: 2em -1.5em 1.8em 2em;
-	}
-.home .aligncenter {
-	margin: 35px auto 0;
 	}
 .aligncenter {
 	clear: both;
@@ -1203,9 +1200,6 @@ a.comment_quote_link:hover,
 .comment-list li.comment .reply a:hover {
 	color: #333;
 	}
-.comment-form p {
-    margin: 5px 0;
-	}
 .comment-form p.form-submit {
     margin-top: 10px;
 	clear: both;
@@ -1275,10 +1269,9 @@ a.comment_quote_link:hover,
 /*	10.2	Comments: form
 ----------------------------------------------- */
 #reply-title {
-	margin: 30px 0 10px;
+	margin: 40px 0 10px;
 	text-transform: uppercase;
 	font-size: 1.6em;
-	padding: 0 0 10px 10px;
 	border-bottom: 1px solid #d6d6d6;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	}
@@ -1293,8 +1286,8 @@ a.comment_quote_link:hover,
 	padding: 0;
 	}
 #commentform label {
+    display: block;
 	text-align: left;
-	margin-left: 5px;
 	}
 p.comment-form-url,
 p.comment-form-email,
@@ -1307,6 +1300,7 @@ p.comment-form-author {
 	}
 .form-allowed-tags {
     float: right;
+    width: 48%;
     padding-left: 8px;
     border-left: 1px solid #d6d6d6;
 	}
@@ -1358,7 +1352,7 @@ label[for=subscribe_reloaded_email] {
 	}
 .search-form #cat {
 	display: block;
-	height: 27px;
+	height: auto;
 	margin: 0 auto;
 	}
 .list-block {
@@ -1713,7 +1707,7 @@ li.recentcomments {
 	margin: 0 0 25px 0;
 	}
 .widget_athemes_social_icons {
-	margin: 8px 0 35px 0;
+	margin: 8px 0 30px 0;
 	}
 .widget_athemes_social_icons ul {
 	width: 100%;
